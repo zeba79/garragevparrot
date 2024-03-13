@@ -1,5 +1,26 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: #EBE5E5;
+
 }
+
+
+body{
+    background-color: #EBE5E5;
+    margin: 0px 1.2rem;
+}
+.slogan{
+    color: #D92332;
+    position: absolute;
+    left: 15rem;
+    top: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.copyright{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #D92332;
+}
+

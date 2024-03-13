@@ -9,12 +9,10 @@
     <title>Garage Vincent Parrot</title>
 </head>
 <body>
-
-
-  <div class="col">
+  <div class="row">
       <header class="d-flex flex-wrap align-items-center justify-content-center
       justify-content-md-between py-3 mb-4 border-bottom">
-        <div class="col-md-3 mb-2 mb-md-0 logo">
+        <div class="col-md-3 mb-2 mb-md-0">
           <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
             <img src="./assets/img/logoVParrot.jpg" alt="Logo garage Parrot" width="30%">
             <p class="slogan">Votre partenaire de confiance</p>
@@ -36,8 +34,9 @@
       </header>
   </div>
 
-    <h1>Hello Vincent Parrot !</h1>
+    <h1>Bienvenu au garage Vincent Parrot !</h1>
 
+    <div class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
         <img src="./assets/img/homepage.jpg" class="d-block mx-lg-auto img-fluid"
@@ -55,17 +54,11 @@
         </div>
       </div>
     </div>
+        </div>
 
-<div class="col">
-  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-    <div class="col mb-3">
-      <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      </a>
-      <p class="text-body-secondary">© 2024</p>
-    </div>
-
-    <div class="col mb-3">
+<div class="column ">
+  <footer class="row ">
+        <div class="col mb-3">
       <h5>Suivez-nous sur :</h5>
       <ul class="nav flex-column">
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Facebook</a></li>
@@ -86,6 +79,12 @@
         <li class="nav-item mb-2">Sam. : 8:45 - 12:00</li>
         <li class="nav-item mb-2">Dim. : Fermé</li>
           </ul>
+    </div>
+
+    <div class="col mb-3">
+      <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+        <p class="text-body-secondary copyright">© 2024 - Garage Vincent Parrot</p>
+      </a>
     </div>
 
   </footer>
