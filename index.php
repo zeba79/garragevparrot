@@ -9,13 +9,39 @@
     <title>Garage Vincent Parrot</title>
 </head>
 <body>
-    <h1>Hello Vincent Parrot !</h1>
 
+
+  <div class="col">
+      <header class="d-flex flex-wrap align-items-center justify-content-center
+      justify-content-md-between py-3 mb-4 border-bottom">
+        <div class="col-md-3 mb-2 mb-md-0 logo">
+          <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+            <img src="./assets/img/logoVParrot.jpg" alt="Logo garage Parrot" width="30%">
+            <p class="slogan">Votre partenaire de confiance</p>
+          </a>
+        </div>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 link-secondary">Accueil</a></li>
+          <li><a href="#" class="nav-link px-2">Mécanique</a></li>
+          <li><a href="#" class="nav-link px-2">Entretien</a></li>
+          <li><a href="#" class="nav-link px-2">Carrosserie</a></li>
+          <li><a href="#" class="nav-link px-2">Contact</a></li>
+        </ul>
+
+        <div class="col-md-3 text-end">
+          <a href="#" class="btn btn-outline-primary me-2">Connexion</a>
+          <a href="#" class="btn btn-primary">Déconnexion</a>
+        </div>
+      </header>
+  </div>
+
+    <h1>Hello Vincent Parrot !</h1>
 
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
         <img src="./assets/img/homepage.jpg" class="d-block mx-lg-auto img-fluid"
-         alt="Photo garage vincent Parrot" width="700" height="500" loading="lazy">
+         alt="Garage vincent Parrot" width="700" height="500" loading="lazy">
       </div>
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Garage Vincent Parrot,
@@ -29,7 +55,42 @@
         </div>
       </div>
     </div>
-  
+
+<div class="col">
+  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+    <div class="col mb-3">
+      <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <p class="text-body-secondary">© 2024</p>
+    </div>
+
+    <div class="col mb-3">
+      <h5>Suivez-nous sur :</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Facebook</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Instagramm</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Tweeter</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Snapchat</a></li>
+      </ul>
+    </div>
+
+    <div class="col mb-3">
+      <h5>Horaires d'ouverture</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2">Lun. : 8:45 - 12:00, 14:00 - 18:00</li>
+        <li class="nav-item mb-2">Mar. : 8:45 - 12:00, 14:00 - 18:00</li>
+        <li class="nav-item mb-2">Mer. : 8:45 - 12:00, 14:00 - 18:00</li>
+        <li class="nav-item mb-2">Jeu. : 8:45 - 12:00, 14:00 - 18:00</li>
+        <li class="nav-item mb-2">Vend. : 8:45 - 12:00, 14:00 - 18:00</li>
+        <li class="nav-item mb-2">Sam. : 8:45 - 12:00</li>
+        <li class="nav-item mb-2">Dim. : Fermé</li>
+          </ul>
+    </div>
+
+  </footer>
+</div>
+
 
 <script src="./assets/js/script.js"></script>
 </body>
