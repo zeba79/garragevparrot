@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
+ <link rel="stylesheet" href="./assets/css/style.css">
     <title>Garage Vincent Parrot</title>
 </head>
 <body>
@@ -34,7 +34,7 @@
       </header>
   </div>
 
-    <h1>Bienvenu au garage Vincent Parrot !</h1>
+    <h1>Bienvenue au garage Vincent Parrot !</h1>
 
     <div class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
@@ -55,6 +55,43 @@
       </div>
     </div>
         </div>
+
+
+
+  <div class="avisClients">
+    <div class="commentaires">
+     <p>nom : Thomas</p>
+     Commentaire :
+     <p>
+       Mon véhicule est suivi dans ce garage depuis 1 ans et demi, je vous le conseil.
+       </p>
+     <p>
+       Note : 5
+       </p>
+    </div>
+    <div class="commentaires">
+     <p>nom : Pierre</p>
+     Commentaire :
+     <p>
+       Mon véhicule est suivi dans ce garage depuis 1 ans et demi, je vous le conseil.
+       </p>
+     <p>
+       Note : 4
+       </p>
+    </div>
+    <div class="commentaires">
+     <p>nom : Justine</p>
+     Commentaire :
+     <p>
+       Mon véhicule est suivi dans ce garage depuis 1 ans et demi, je vous le conseil.
+       </p>
+     <p>
+       Note : 3
+       </p>
+    </div>
+</div>
+
+
 
 <div class="column ">
   <footer class="row ">
@@ -90,7 +127,7 @@
   </footer>
 </div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="./assets/js/script.js"></script>
 </body>
 </html>
