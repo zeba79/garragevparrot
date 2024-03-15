@@ -1,9 +1,9 @@
 
 
 <?php
-include_once './config/config.php';
+require_once './config/config.php';
 require_once './lib/menu.php';
-include_once './templates/header.php';
+require_once './templates/header.php'
 
 ?>
 
@@ -11,7 +11,7 @@ include_once './templates/header.php';
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
         <a href="index.php">
-          <img src="/uploads/vehicules/mecanique.jpg"  class="d-block mx-lg-auto img-fluid"
+          <img src="/uploads/vehicules/carrosserie.jpg"  class="d-block mx-lg-auto img-fluid"
           alt="Bootstrap Themes" width="700" height="500" loading="lazy">
         </a>
       </div>
@@ -29,6 +29,6 @@ include_once './templates/header.php';
   </div>
 
 <?php
-include_once './templates/footer.php';
+require_once './templates/footer.php';
 
 ?>

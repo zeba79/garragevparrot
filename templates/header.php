@@ -2,20 +2,15 @@
 $currentPage = basename($_SERVER['SCRIPT_NAME']);
 ?>
 
-<?php
-include './lib/menu.php'
-?>
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
- <link rel="stylesheet" href="./assets/css/style.css">
-    <title><?=htmlentities($menuItem["head_title"]);?></title>
+    <title><?=htmlentities($mainMenu[$currentPage]["head_title"]);?></title>
 </head>
 <body>
   <div class="row">
@@ -26,19 +21,19 @@ include './lib/menu.php'
             <img src="./assets/img/logoVParrot.jpg" alt="Logo garage Parrot" width="30%">
             <p class="slogan">Votre partenaire de confiance</p>
           </a>
-        </div>
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-<?php
-foreach ($mainMenu as $key => $menuItem) {?>
-  <li class="nav-item"><a href="<?=$key;?>" class="nav-link px-2 parrot-color "><?=htmlentities($menuItem["title_menu"]);?></a></li>
-  <?php
-if ($key === $currentPage) {echo "parrobtn";}?>
-<?php }?>
-</ul>
+    </div>
 
-        <div class="col-md-3 text-end">
-          <a href="#" class="btn btn-outline-primary me-2">Connexion</a>
-          <a href="#" class="btn btn-primary">Déconnexion</a>
-        </div>
-      </header>
+  <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+  <?php foreach ($mainMenu as $key => $menuItem) {?>
+    <li class="nav-item"><a href="<?=$key;?>" class="nav-link px-2 parrot-color parrotbtn
+    <?php if ($key === $currentPage) {echo "parrotbtn";}?> ">
+  <?=htmlentities($menuItem["title_menu"]);?></a></li>
+  <?php }?>
+  </ul>
+
+  <div class="col-md-3 text-end">
+   <a href="connexion.php" class="btn parrot-color parrotbtn ">Connexion</a>
+   <a href="deconnexion.php" class="btn parrot-color parrotbtn">Déconnexion</a>
   </div>
+  </header>
+</div>

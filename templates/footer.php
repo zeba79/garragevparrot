@@ -25,15 +25,13 @@
     </div>
 
     <div class="col mb-3">
-      <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+      <a href="index.php" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
         <p class="text-body-secondary copyright">© 2024 - Garage Vincent Parrot</p>
       </a>
     </div>
 
   </footer>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="./assets/js/script.js"></script>
 </body>
 </html>

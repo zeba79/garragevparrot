@@ -9,15 +9,6 @@ body{
     background-color: #EBE5E5;
     margin: 0px 1.2rem;
 }
-.slogan{
-    color: #D92332;
-    position: absolute;
-    left: 15rem;
-    top: 2rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
 
 .avisClients{
     display: flex;
@@ -26,9 +17,11 @@ body{
     border: 1px solid red;
 }
 
+
 .commentaires{
     border: 1px solid red;
 }
+
 .copyright{
     font-size: 1.2rem;
     font-weight: bold;
@@ -36,19 +29,19 @@ body{
 }
 
 .parrot-color{
-    color: #D92332;
+    color: #D36F6F;
 }
 
 .parrotbtn{
-    background-color: #262526;
+    background-color: #533E3E;
     border-radius: 5px;
-    color: #F2F2F2;
+    color: #FFFFFF;
 }
 
 .parrotbtn:hover{
     background-color: #262526;
     border-radius: 5px;
-    color: #D92332;
+    color: #D36F6F;
 }
 
 
