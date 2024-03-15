@@ -35,4 +35,20 @@ body{
     color: #D92332;
 }
 
+.parrot-color{
+    color: #D92332;
+}
+
+.parrotbtn{
+    background-color: #262526;
+    border-radius: 5px;
+    color: #F2F2F2;
+}
+
+.parrotbtn:hover{
+    background-color: #262526;
+    border-radius: 5px;
+    color: #D92332;
+}
+
 
