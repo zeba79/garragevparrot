@@ -1,6 +1,6 @@
 <h1>Bienvenue au garage Vincent Parrot !</h1>
 
-<div class="container col-xxl-8 px-4 py-5">
+<div class="container ">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
       <img src="./assets/img/homepage.jpg" class="d-block mx-lg-auto img-fluid" alt="Garage vincent Parrot" width="700" height="500" loading="lazy">
@@ -13,8 +13,7 @@
         variables and mixins, responsive grid system, extensive prebuilt components,
         and powerful JavaScript plugins.</p>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <button type="button" class="btn  btn-lg px-4 me-md-2 parrot-color parrotbtn ">Voir nos véhicule d'Occasion</button>
-      </div>
+        <a href="occasions.php" class="btn  btn-lg px-4 me-md-2 parrot-color parrotbtn ">Voir nos véhicule d'Occasion</a>
     </div>
   </div>
 </div>

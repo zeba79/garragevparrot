@@ -10,7 +10,7 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/style.css">
-  <title><?= htmlentities($mainMenu[$currentPage]["head_title"]); ?></title>
+  <title><?=htmlentities($mainMenu[$currentPage]["head_title"]);?></title>
 </head>
 
 <body>
@@ -25,13 +25,13 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
       </div>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <?php foreach ($mainMenu as $key => $menuItem) { ?>
-          <li class="nav-item "><a href="<?= $key; ?>" class="nav-link px-2 parrot-color
+        <?php foreach ($mainMenu as $key => $menuItem) {?>
+          <li class="nav-item "><a href="<?=$key;?>" class="nav-link px-2 parrot-color
     <?php if ($key === $currentPage) {
-            echo "parrotbtn";
-          } ?> ">
-              <?= htmlentities($menuItem["title_menu"]); ?></a></li>
-        <?php } ?>
+    echo "parrotbtn";
+}?> ">
+              <?=htmlentities($menuItem["title_menu"]);?></a></li>
+        <?php }?>
       </ul>
 
       <div class="column">
