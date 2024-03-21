@@ -5,7 +5,6 @@
 require_once './config/config.php';
 require_once './lib/pdo.php';
 require_once './lib/vehicule.php';
-require_once './lib/menu.php';
 require_once './templates/header.php';
 require_once './templates/main.php';
 

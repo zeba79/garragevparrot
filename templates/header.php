@@ -1,4 +1,5 @@
 <?php
+require_once './lib/menu.php';
 $currentPage = basename($_SERVER['SCRIPT_NAME']);
 ?>
 

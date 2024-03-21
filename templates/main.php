@@ -8,10 +8,10 @@
     <div class="col-lg-6">
       <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Garage Vincent Parrot,
         votre expert en réparation automobile</h1>
-      <p class="lead">Quickly design and customize responsive mobile-first sites with
-        Bootstrap, the world’s most popular front-end open source toolkit, featuring Sas
-        variables and mixins, responsive grid system, extensive prebuilt components,
-        and powerful JavaScript plugins.</p>
+      <p class="lead">Votre partenaire de confiance depuis 2022
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Temporibus excepturi, praesentium laborum numquam totam facilis ipsum tempora
+          aliquid quidem tenetur hic omnis corrupti! Unde, quos..</p>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
         <a href="occasions.php" class="btn  btn-lg px-4 me-md-2 parrot-color parrotbtn ">Voir nos véhicule d'Occasion</a>
     </div>

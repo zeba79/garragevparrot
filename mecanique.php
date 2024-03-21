@@ -2,7 +2,6 @@
 
 <?php
 include_once './config/config.php';
-require_once './lib/menu.php';
 include_once './templates/header.php';
 
 ?>
@@ -18,11 +17,13 @@ include_once './templates/header.php';
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
             <?=WELLCOME_PAGE . " " . htmlentities($mainMenu[$currentPage]['title_menu'])?></h1>
-        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap,
-          the world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
-          responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+        <p class="lead">La mécanique nous permet de remettre de la pêche dans vos véhicules
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Temporibus excepturi, praesentium laborum numquam totam facilis ipsum tempora
+          aliquid quidem tenetur hic omnis corrupti! Unde, quos..
+        </p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a href="vehicules.php" class="btn parrotbtn btn-lg px-4 me-md-2">Voir nos véhicules d'Occasion</a>
+        <a href="<?=OCCASIONS_PAGES;?>" class="btn parrotbtn btn-lg px-4 me-md-2">Voir nos véhicules d'Occasion</a>
         </div>
       </div>
     </div>
