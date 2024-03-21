@@ -7,7 +7,7 @@
                 <p class="card-text">Mise en circulation : <?=htmlentities($vehicule['anneeImmatriculation']);?></p>
                 <p class="card-text">Carburant : <?=htmlentities($vehicule['carburant']);?></p>
                 <p class="card-text">Kilométrage : <?=htmlentities($vehicule['kilometrage']);?></p>
-                <a href="vehicule.php" class="btn parrotbtn">Voir Détails</a>
+                <a href="vehicule.php,id=<?=$vehicule['id']?>" class="btn parrotbtn">Voir Détails</a>
             </div>
     </div>
 </div>

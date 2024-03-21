@@ -9,13 +9,13 @@ body{
     background-color: #EBE5E5;
     margin: 0px 1.2rem;
 }
-
+/* 
 header{
-    /* background-color:#c0b4b4; */
+    background-color:#c0b4b4;
     border-radius: 5px;
     border: 1px solid  #D36F6F;
     margin-bottom: 3px;
-}
+} */
 
 .slogan{
     color: #D92332;
@@ -60,10 +60,10 @@ header{
     border-radius: 5px;
     color: #D36F6F;
 }
-
+/* 
 footer{
-    /* background-color:#c0b4b4; */
+    background-color:#c0b4b4;
     border-radius: 5px;
     border: 1px solid  #D36F6F;
-}
+} */
 
