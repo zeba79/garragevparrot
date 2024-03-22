@@ -18,7 +18,7 @@ function getVehicules(PDO $pdo, int $limit = null): array
     return $vehicules;
 }
 
-function getVehiculeById(PDO $pdo, int $id): array
+function getVehiculeById(PDO $pdo, int $id): array | bool
 {
     $sql = 'SELECT * FROM vehicules WHERE id = :id';
     $recupererId = $pdo->prepare($sql);
@@ -26,4 +26,15 @@ function getVehiculeById(PDO $pdo, int $id): array
     $recupererId->execute();
     $vehicules = $recupererId->fetch(PDO::FETCH_ASSOC);
     return $vehicules;
+}
+
+function getVehiculesImage(string | null $image): string
+{
+// condition si image = null alors charge image par defaut sinon charge l'image depuis le dossier upload
+    if ($image === null) {
+        $imagePath = DEFAULT_IMAGES . "defaultcar.jpg";
+    } else {
+        $imagePath = UPLOADS_IMAGES . htmlentities($image);
+    }
+    return $imagePath;
 }

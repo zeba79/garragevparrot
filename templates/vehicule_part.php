@@ -1,10 +1,7 @@
 <?php
 // condition si image = null alors charge image par defaut sinon charge l'image depuis le dossier upload
-if ($vehicule['image'] === null) {
-    $imagePath = DEFAULT_IMAGES . "defaultcar.jpg";
-} else {
-    $imagePath = UPLOADS_IMAGES . htmlentities($vehicule['image']);
-}
+
+$imagePath = getVehiculesImage($vehicule['image']);
 
 ?>
 

@@ -2,20 +2,26 @@
 require_once './config/config.php';
 require_once './lib/pdo.php';
 require_once './lib/vehicule.php';
-require_once './templates/header.php';
 
-$id = $_GET['id'];
-$vehicule = getVehiculeById($pdo, $id);
+$errors = false;
 
-// condition si image = null alors charge image par defaut sinon charge l'image depuis le dossier upload
-if ($vehicule['image'] === null) {
-    $imagePath = DEFAULT_IMAGES . "defaultcar.jpg";
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $vehicule = getVehiculeById($pdo, $id);
+    if (!$vehicule) {
+        $errors = true;
+    }
 } else {
-    $imagePath = UPLOADS_IMAGES . htmlentities($vehicule['image']);
-
+    $errors = true;
 }
 
+$imagePath = getVehiculesImage($vehicule['image']);
+
+require_once './templates/header.php';
+
 ?>
+<?PHP
+if (!$errors) {?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -25,6 +31,7 @@ if ($vehicule['image'] === null) {
     <title>Véhicule</title>
 </head>
 <body>
+
 <div class="container ">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
@@ -45,6 +52,11 @@ if ($vehicule['image'] === null) {
     </div>
   </div>
 </div>
+<?PHP } else {?>
+  <h1>Article introuvable</h1>
+
+  <?PHP }?>
+
 
 <div class="contacterAtelier">
     <h2>
