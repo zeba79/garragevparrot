@@ -9,12 +9,11 @@ require_once './templates/header.php';
 require_once './templates/main.php';
 
 $vehicules = getVehicules($pdo);
-
 ?>
 
 <div class="row">
     <?php foreach ($vehicules as $key => $vehicule) {
-    require './templates/vehicule_part.php';
+    require_once './templates/vehicule_part.php';
 
 }?>
 </div>
