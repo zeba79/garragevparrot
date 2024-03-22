@@ -59,9 +59,31 @@ if (!$errors) {?>
 
 
 <div class="contacterAtelier">
-    <h2>
-        Contacter notre Atelier
-    </h2>
+
+    <form action="" method="post">
+      <legend>Vous souhaiter avoir des informations sur ce véhicule ?
+        Contacter notre Atelier en remplissant le formulaire ci-dessous :</legend>
+      <label for="nom" class="form-label" >Nom :</label>
+      <input type="text" name="nom" id="nom" class="form-control" >
+
+      <label for="prenom" class="form-label" >Prénom :</label>
+      <input type="text" name="prenom" id="prenom" class="form-control" >
+
+      <label for="email" class="form-label" >Email :</label>
+      <input type="email" name="email" id="email" class="form-control" >
+
+      <label for="password" class="form-label" >Mot de passe :</label>
+      <input type="password" name="password" id="password" class="form-control" >
+
+      <label for="message" class="form-label" >Message :</label>
+      <textarea name="message" id="" cols="30" rows="10" class="form-control" ></textarea>
+      <br>
+
+      <input type="submit" name="Envoyer">
+      <br>
+      <br>
+
+    </form>
 </div>
 </body>
 </html>
