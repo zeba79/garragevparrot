@@ -20,6 +20,7 @@ $vehicules = getVehicules($pdo);
 
 <?php
 require_once './partials/avisClients.php';
+require_once './templates/commentaireClients.php';
 
 ?>
 <?php
