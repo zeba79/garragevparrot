@@ -1,7 +1,8 @@
 
 <div class="container">
   <div class="row">
-    <input type="submit" name="readComment" id="readComment" value="Lire les ommentaires"  class="parrotbtn readComment">
+    <input type="submit" name="readComment" id="readComment"
+    value="Lire les ommentaires"  class="parrotbtn readComment">
   </div>
 </div>
 
@@ -40,8 +41,15 @@
     value="Laissez un Commentaire"  class="parrotbtn keepComment">
   </div>
 </div>
-<script>
+<!-- <script>
 
-  readComment = document.getElementsByClassName(readComment);
-  readComment.add
-</script>
+function afficherCommentaires(){
+alert('Bonjour !');
+}
+
+// const avisClients = document.getElementsByClassName('avisClients');
+
+  const readComment = document.getElementsByClassName("readComment");
+  console.log(readComment);
+  readComment.addEventListener('click', afficherCommentaires());
+</script> -->

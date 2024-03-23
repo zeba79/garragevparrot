@@ -1,6 +1,21 @@
 <?php
+require_once './lib/pdo.php';
+
 if (isset($_POST['envoyer']) && !empty($_POST['nom']) && !empty($_POST['commentaire']) && !empty($_POST['note'])) {
-    echo 'Bravo !';
+
+    $nomCommenaireForm = htmlentities($_POST['nom']);
+    $commentaireCommenaireForm = htmlentities($_POST['commentaire']);
+    $noteCommenaireForm = nl2br(htmlentities($_POST['note']));
+
+    $insererCommentaire = 'INSERT INTO comments(nom, commentaire, note) VALUES(:nom, :commentaire, :note)';
+    $stmt = $pdo->prepare($insererCommentaire);
+    $stmt->bindParam(":nom", $nomCommenaireForm);
+    $stmt->bindParam(":commentaire", $commentaireCommenaireForm);
+    $stmt->bindParam(":note", $noteCommenaireForm);
+    $stmt->execute();
+
+    echo 'Commentaire envoyé !';
+
 } else {
     echo 'Veuillez remplir les chapms';
 }
