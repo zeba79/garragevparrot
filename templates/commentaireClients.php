@@ -1,3 +1,12 @@
+<?php
+if (isset($_POST['envoyer']) && !empty($_POST['nom']) && !empty($_POST['commentaire']) && !empty($_POST['note'])) {
+    echo 'Bravo !';
+} else {
+    echo 'Veuillez remplir les chapms';
+}
+?>
+
+
 <div class="container">
     <div class="row">
     <form action="" method="post">
@@ -6,16 +15,13 @@
       <input type="text" name="nom" id="nom" class="form-control" >
 
       <label for="commentaire" class="form-label" >Commentaire :</label>
-      <input type="text" name="commentaire" id="commentaire" class="form-control" >
+      <textarea type="text" name="commentaire" id="commentaire" class="form-control" ></textarea>
 
       <label for="note" class="form-label" > Note :</label>
-      <input type="note" name="note" id="note" class="form-control" >
-
-      <label for="password" class="form-label" >Mot de passe :</label>
-      <input type="password" name="password" id="password" class="form-control" >
+      <input type="number" name="note" id="note" class="form-control" >
       <br>
 
-      <input type="submit" name="Envoyer" class="parrotbtn">
+      <input type="submit" name="envoyer" class="parrotbtn">
       <br>
       <br>
 
