@@ -72,8 +72,8 @@ if (!$errors) {?>
       <label for="email" class="form-label" >Email :</label>
       <input type="email" name="email" id="email" class="form-control" >
 
-      <label for="password" class="form-label" >Mot de passe :</label>
-      <input type="password" name="password" id="password" class="form-control" >
+      <label for="telephone" class="form-label" >Téléphone :</label>
+     <input type="tel" name="telephone" id="" class="form-control" >
 
       <label for="message" class="form-label" >Message :</label>
       <textarea name="message" id="" cols="30" rows="10" class="form-control" ></textarea>

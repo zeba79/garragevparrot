@@ -13,28 +13,24 @@ $commentaires = getCommentaires($pdo);
 <div class="row">
     <?php foreach ($vehicules as $key => $vehicule) {
     require_once './templates/vehicule_part.php';
-
 }?>
 </div>
-
 
 <?php
 require_once './templates/readComment.php';
 ?>
 
-<div class="row">
-    <?php foreach ($commentaires as $key => $commentaire) {
-    require_once './templates/avisClients.php';
-
-}?>
+<div class="avisClients">
+<?php
+foreach ($commentaires as $key => $commentaire) {
+    require './templates/avisClients.php';
+}
+?>
 </div>
+
 
 <?php
 require_once './templates/leaveComment.php';
 require_once './commentaireClients.php';
-
-?>
-<?php
 require_once './templates/footer.php';
-
 ?>
