@@ -10,11 +10,11 @@ $vehicules = getVehicules($pdo);
 $commentaires = getCommentaires($pdo);
 ?>
 
-<div class="row">
+
     <?php foreach ($vehicules as $key => $vehicule) {
     require_once './templates/vehicule_part.php';
 }?>
-</div>
+
 
 <?php
 require_once './templates/readComment.php';

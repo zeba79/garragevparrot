@@ -10,8 +10,7 @@ function getVehicules(PDO $pdo, int $limit = null): array
     }
     $query = $pdo->prepare($sql);
 
-    if ($limit) {$query->bindValue(":limit", $limit, PDO::PARAM_INT);
-    }
+    if ($limit) {$query->bindValue(":limit", $limit, PDO::PARAM_INT);}
     $query->execute();
     $vehicules = $query->fetchAll(PDO::FETCH_ASSOC);
 
