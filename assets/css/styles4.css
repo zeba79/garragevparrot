@@ -59,3 +59,9 @@ header, footer{
     border-radius: 5px;
     color: #D36F6F;
 }
+
+.commentForm, .hideComment, .hideForm{
+    visibility: hidden;
+}
+
+

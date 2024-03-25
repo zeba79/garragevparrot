@@ -28,7 +28,6 @@ foreach ($commentaires as $key => $commentaire) {
 ?>
 </div>
 
-
 <?php
 require_once './templates/leaveComment.php';
 require_once './commentaireClients.php';

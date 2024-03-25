@@ -1,3 +1,5 @@
+<div class="container ">
+
 <?php
 require_once './lib/pdo.php';
 
@@ -22,8 +24,7 @@ if (isset($_POST['envoyer']) && !empty($_POST['nom']) && !empty($_POST['commenta
 ?>
 
 
-<div class="container">
-    <div class="row">
+    <div class="row commentForm">
     <form action="" method="post">
       <legend>Laisser un commentaire :</legend>
       <label for="nom" class="form-label" >Nom :</label>
