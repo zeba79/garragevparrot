@@ -7,12 +7,12 @@ require_once __DIR__ . '/templates/header.php';
 <h2 class="mx-5"> Remplir le formulaire ci-dessous</h2>
 <form action="inscriptionPost.php" method="post">
     <div class="mb-3 mx-5">
-        <label for="last_name" class="form-label">Nom</label>
-        <input type="text" name="last_name" id="last_name" class="form-control" required >
+        <label for="nom" class="form-label">Nom</label>
+        <input type="text" name="nom" id="nom" class="form-control" required >
     </div>
     <div class="mb-3 mx-5">
-        <label for="first_name" class="form-label">Prénom</label>
-        <input type="text" name="first_name" id="first_name" class="form-control" required >
+        <label for="prenom" class="form-label">Prénom</label>
+        <input type="text" name="prenom" id="prenom" class="form-control" required >
     </div>
     <div class="mb-3 mx-5">
         <label for="email" class="form-label" required >Email</label>
