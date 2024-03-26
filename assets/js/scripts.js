@@ -35,6 +35,6 @@ hideComment.addEventListener("click", cacherCommentaires);
   hideForm.addEventListener("click", cacherFormulaire);
 
   function cacherFormulaire (){
-    commentForm.setAttribute("style", "visibility:visible;");
+    commentForm.setAttribute("style", "visibility:hidden;");
     hideForm.setAttribute("style", "visibility:hidden;");
   }
