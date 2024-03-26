@@ -23,7 +23,7 @@ require_once './templates/header.php'
           aliquid quidem tenetur hic omnis corrupti! Unde, quos..
         </p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a href="<?=OCCASIONS_PAGES;?>" class="btn parrotbtn btn-lg px-4 me-md-2">Voir nos véhicules d'Occasion</a>
+        <a href="<?=OCCASIONS_PAGES;?>" class="btn parrotbtn px-4 me-md-2">Voir nos véhicules d'Occasion</a>
         </div>
       </div>
     </div>

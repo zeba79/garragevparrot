@@ -1,8 +1,6 @@
 <div class="contacterAtelier">
 
     <form action="" method="post">
-      <legend>Vous souhaiter avoir des informations sur ce véhicule ?
-        Contacter notre Atelier en remplissant le formulaire ci-dessous :</legend>
       <label for="nom" class="form-label" >Nom :</label>
       <input type="text" name="nom" id="nom" class="form-control" >
 

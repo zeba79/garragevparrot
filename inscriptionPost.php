@@ -27,14 +27,15 @@ try {
         $hashedPassword = password_hash($passwordForm, PASSWORD_DEFAULT);
 
         // Inserer l'utilisateur en BDD
-        $insertquery = "INSERT INTO users(nom, prenom, email, password) VALUES (:nom, :prenom, :email, :password)";
+        $insertquery = "INSERT INTO users(nom, prenom, email, password, role)
+        VALUES (:nom, :prenom, :email, :password, role = null)";
         $stmt = $pdo->prepare($insertquery);
         $stmt->bindParam(":nom", $nomForm);
         $stmt->bindParam(":prenom", $prenomForm);
         $stmt->bindParam(":email", $emailForm);
-        $stmt->bindParam(":pssaword", $hashedPassword);
+        $stmt->bindParam(":password", $hashedPassword);
         $stmt->execute();
-        header("location: index.php");
+        header("location: inscriptionRedirection.php");
     }
 
 } catch (PDOException $e) {

@@ -48,7 +48,7 @@ if (!$errors) {?>
                 <p class="card-text">Options : <?=htmlentities($vehicule['options']);?></p>
                 <br>
             </div>
-        <a href="occasions.php" class="btn  btn-lg px-4 me-md-2 parrot-color parrotbtn ">Voir nos véhicule d'Occasion</a>
+        <a href="occasions.php" class="btn px-4 me-md-2 parrot-color parrotbtn ">Voir nos véhicule d'Occasion</a>
     </div>
   </div>
 </div>
@@ -58,10 +58,8 @@ if (!$errors) {?>
   <?PHP }?>
 
 
-
-</body>
-</html>
-
+  <legend>Vous souhaiter avoir des informations sur ce véhicule ?
+        Contacter notre Atelier en remplissant le formulaire ci-dessous :</legend>
 <?php
 require_once './templates/contactAtelier.php';
 
@@ -71,3 +69,6 @@ require_once './templates/contactAtelier.php';
 require_once './templates/footer.php';
 
 ?>
+</body>
+</html>
+

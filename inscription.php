@@ -1,10 +1,11 @@
+
 <?php
-require_once __DIR__ . '/config/config.php';
-require_once __DIR__ . '/templates/header.php';
+include_once './config/config.php';
+include_once './templates/header.php';
+
 ?>
 
-<h1 class="text-center"> <?=WELLCOME_PAGE?> contact !</h1>
-<h2 class="mx-5"> Remplir le formulaire ci-dessous</h2>
+<h2 class="mx-5"> Notre formulaire d'inscription</h2>
 <form action="inscriptionPost.php" method="post">
     <div class="mb-3 mx-5">
         <label for="nom" class="form-label">Nom</label>
@@ -24,6 +25,8 @@ require_once __DIR__ . '/templates/header.php';
     </div>
     <input type="submit" value="Envoyer" name="loginUser" class="btn parrotbtn mx-5">
 </form>
+
 <?php
-require_once __DIR__ . '/templates/footer.php';
+include_once './templates/footer.php';
+
 ?>
