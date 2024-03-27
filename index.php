@@ -1,5 +1,7 @@
 <?php
+
 require_once './config/config.php';
+require_once './lib/session.php';
 require_once './lib/pdo.php';
 require_once './lib/vehicule.php';
 require_once './lib/commentaire.php';
@@ -8,6 +10,7 @@ require_once './templates/main.php';
 
 $vehicules = getVehicules($pdo);
 $commentaires = getCommentaires($pdo);
+
 ?>
 
 

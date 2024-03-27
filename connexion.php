@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/lib/session.php';
 require_once __DIR__ . '/lib/pdo.php';
 require_once __DIR__ . '/lib/user.php';
 require_once __DIR__ . '/templates/header.php';
@@ -15,6 +16,8 @@ if (isset($_POST["loginUser"])) {
     $user = verifyLoginUserAndPassword($pdo, $emailform, $passwordForm);
 
     if ($user) {
+        session_regenerate_id(true);
+        $_SESSION["user"] = $user;
         //  si le role est admin
         if ($user["role"] === "admin") {
             // alors redirige vers interface admin

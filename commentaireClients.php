@@ -19,7 +19,7 @@ if (isset($_POST['envoyer']) && !empty($_POST['nom']) && !empty($_POST['commenta
     echo 'Commentaire envoyé !';
 
 } else {
-    echo 'Veuillez remplir les chapms';
+    echo 'Veuillez remplir les champs';
 }
 ?>
 

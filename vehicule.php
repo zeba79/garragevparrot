@@ -61,6 +61,16 @@ if (!$errors) {?>
   <legend>Vous souhaiter avoir des informations sur ce véhicule ?
         Contacter notre Atelier en remplissant le formulaire ci-dessous :</legend>
 <?php
+
+if (isset($_POST["Envoyer"])) {
+    if (!empty($_POST["nom"]) && !empty($_POST["prenom"])
+        && !empty($_POST["email"]) && !empty($_POST["telephone"])
+        && !empty($_POST["message"])) {
+        echo "Votre message a été bien pris en compte ";
+    } else {
+        echo "Veuillez remplir les champs...";
+    }
+}
 require_once './templates/contactAtelier.php';
 
 ?>
