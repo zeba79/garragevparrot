@@ -10,6 +10,7 @@ require_once './templates/main.php';
 
 $vehicules = getVehicules($pdo);
 $commentaires = getCommentaires($pdo);
+var_dump($_SESSION);
 
 ?>
 
