@@ -1,4 +1,6 @@
 <?php
+require_once './config/config.php';
+require_once './lib/session.php';
 require_once './lib/menu.php';
 $currentPage = basename($_SERVER['SCRIPT_NAME']);
 ?>
@@ -37,8 +39,13 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
       </ul>
 
       <div class="column">
-        <a href="connexion.php" class="btn parrot-color parrotbtn ">Connexion</a>
+
+      <?php
+if (isset($_SESSION["user"])) {?>
         <a href="deconnexion.php" class="btn parrot-color parrotbtn">Déconnexion</a>
+        <?php } else {?>
+          <a href="connexion.php" class="btn parrot-color parrotbtn ">Connexion</a>
+        <?php }?>
       </div>
     </header>
   </div>
