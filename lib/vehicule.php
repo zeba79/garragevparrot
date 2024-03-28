@@ -1,9 +1,8 @@
 <?php
-require_once './lib/pdo.php';
 
 function getVehicules(PDO $pdo, int $limit = null): array
 {
-    $sql = 'SELECT * From vehicules ORDER BY id DESC';
+    $sql = 'SELECT * From vehicules ORDER BY id ASC';
 
     if ($limit) {
         $sql .= "LIMIT :limit";
