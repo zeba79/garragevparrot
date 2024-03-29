@@ -27,14 +27,11 @@ foreach ($employes as $employe) {?>
                         <td scope="row"><?=$employe["nom"];?></td>
                         <td scope="row"><?=$employe["prenom"];?></td>
                         <td scope="row"><?=$employe["role"];?></td>
-
                         <td>
-                            <button class="parrotbtn" type="button">Modifier</button>
+                        <a href="#" class="btn btn-success">Ajouter</a>
+                        <a href="#" class="btn btn-primary">Modifier</a>
+                        <a href="#" class="btn btn-danger ">Supprimer</a>
                         </td>
-                        <td>
-                            <button class="parrotbtn" type="button">Supprimer</button>
-                        </td>
-
         </tr>
                 <?php }?>
     </tbody>
