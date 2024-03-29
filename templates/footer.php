@@ -1,6 +1,6 @@
 
 <div class="column ">
-  <footer class="row ">
+  <footer class="row header_footer">
         <div class="col mb-3">
       <h5>Suivez-nous sur :</h5>
       <ul class="nav flex-column">

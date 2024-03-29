@@ -28,7 +28,7 @@ foreach ($employes as $employe) {?>
                         <td scope="row"><?=$employe["prenom"];?></td>
                         <td scope="row"><?=$employe["role"];?></td>
                         <td>
-                        <a href="#" class="btn btn-success">Ajouter</a>
+                        <a href="deleteArticle.php" class="btn btn-success" onclick=" return confirm('etes-vous sûr de cet ajout')" >Ajouter</a>
                         <a href="#" class="btn btn-primary">Modifier</a>
                         <a href="#" class="btn btn-danger ">Supprimer</a>
                         </td>

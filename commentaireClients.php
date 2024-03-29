@@ -3,6 +3,8 @@
 <?php
 require_once './lib/pdo.php';
 
+$messages = [];
+$errors = [];
 if (isset($_POST['envoyer']) && !empty($_POST['nom']) && !empty($_POST['commentaire']) && !empty($_POST['note'])) {
 
     $nomCommenaireForm = htmlentities($_POST['nom']);
@@ -16,12 +18,26 @@ if (isset($_POST['envoyer']) && !empty($_POST['nom']) && !empty($_POST['commenta
     $stmt->bindParam(":note", $noteCommenaireForm);
     $stmt->execute();
 
-    echo 'Commentaire envoyé !';
+    $messages[] = 'Commentaire envoyé !';
 
 } else {
-    echo 'Veuillez remplir les champs';
+    $errors[] = 'Veuillez remplir les champs';
 }
 ?>
+
+<?php
+foreach ($messages as $message) {?>
+<div class="alert alert-success mt-2"><?=$message;?></div>
+<?php }
+?>
+<?php
+foreach ($errors as $error) {?>
+<div class="alert alert-danger mt-2"><?=$error;?></div>
+<?php }?>
+
+
+
+
 
 
     <div class="row commentForm">

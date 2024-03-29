@@ -1,3 +1,27 @@
+<?php
+$messages = [];
+$errors = [];
+if (isset($_POST["Envoyer"])) {
+    if (!empty($_POST["nom"]) && !empty($_POST["prenom"])
+        && !empty($_POST["email"]) && !empty($_POST["telephone"])
+        && !empty($_POST["message"])) {
+        $messages[] = "Votre message a été bien pris en compte ";
+    } else {
+        $errors[] = "Veuillez remplir les champs...";
+    }
+}
+?>
+
+<?php
+foreach ($messages as $message) {?>
+<div class="alert alert-success mt-2"><?=$message;?></div>
+<?php }
+?>
+<?php
+foreach ($errors as $error) {?>
+<div class="alert alert-danger mt-2"><?=$error;?></div>
+<?php }?>
+
 <div class="contacterAtelier">
 
     <form action="" method="post">
