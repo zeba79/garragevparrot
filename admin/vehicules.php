@@ -18,24 +18,23 @@ $vehicules = getVehicules($pdo);
     </tr>
   </thead>
   <tbody>
-
-  <?php
+<tr>
+    <?php
 foreach ($vehicules as $vehicule) {?>
-    <td scope="row"><?=$vehicule["id"];?></td>
-    <td scope="row"><?=$vehicule["marque"];?></td>
-    <td scope="row"><?=$vehicule["anneeImmatriculation"];?></td>
-    <td scope="row"><?=$vehicule["kilometrage"];?></td>
-    <td scope="row"><?=$vehicule["prix"];?></td>
-    <td>
-        <button class="parrotbtn" type="button">Modifier</button>
-    </td>
-    <td>
-        <button class="parrotbtn" type="button">Supprimer</button>
-    </td>
+          <td scope="row"><?=$vehicule["id"];?></td>
+          <td scope="row"><?=$vehicule["marque"];?></td>
+          <td scope="row"><?=$vehicule["anneeImmatriculation"];?></td>
+          <td scope="row"><?=$vehicule["kilometrage"];?></td>
+          <td scope="row"><?=$vehicule["prix"];?></td>
+          <td>
+              <button class="parrotbtn" type="button">Modifier</button>
+          </td>
+          <td>
+              <button class="parrotbtn" type="button">Supprimer</button>
+          </td>
 
-    </tr>
-<?php }?>
-
+ </tr>
+    <?php }?>
   </tbody>
 </table>
 

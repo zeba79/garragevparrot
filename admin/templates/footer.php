@@ -3,6 +3,7 @@
 </div>
     <footer class="py-3 my-4">
         <p class="text-center">Interface Admin</p>
+        <p class=" text-center text-body-secondary copyright">© 2024 - Garage Vincent Parrot</p>
     </footer>
 
 

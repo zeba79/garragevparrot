@@ -1,15 +1,47 @@
 <?php
-
 require_once __DIR__ . "/../lib/pdo.php";
-require_once __DIR__ . "/../lib/vehicule.php";
+require_once __DIR__ . "/../lib/employe.php";
 require_once __DIR__ . "/../admin/templates/header.php";
-$vehicules = getVehicules($pdo);
+
+$employes = getEmployesByRole($pdo);
 ?>
 
-<h1>Hello</h1>
+<h1>Liste des employés</h1>
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prénom</th>
+        <th scope="col">Rôle</th>
+        <th scope="col">Actions</th>
+        </tr>
+    </thead>
 
+    <tbody>
+        <tr>
+                <?php
+foreach ($employes as $employe) {?>
+
+                        <td scope="row"><?=$employe["id"];?></td>
+                        <td scope="row"><?=$employe["nom"];?></td>
+                        <td scope="row"><?=$employe["prenom"];?></td>
+                        <td scope="row"><?=$employe["role"];?></td>
+
+                        <td>
+                            <button class="parrotbtn" type="button">Modifier</button>
+                        </td>
+                        <td>
+                            <button class="parrotbtn" type="button">Supprimer</button>
+                        </td>
+
+        </tr>
+                <?php }?>
+    </tbody>
+</table>
 
 
 <?php
 require_once __DIR__ . "/../admin/templates/footer.php";
 ?>
+
