@@ -41,11 +41,12 @@ if (!$errors) {?>
     <div class="card-body">
                 <h3 class="card-title"><?=htmlentities($vehicule['marque']);?></h3>
                 <br>
-                <p class="card-text">Prix : <?=htmlentities($vehicule['prix']);?></p>
-                <p class="card-text">Mise en circulation : <?=htmlentities($vehicule['anneeImmatriculation']);?></p>
-                <p class="card-text">Carburant : <?=htmlentities($vehicule['carburant']);?></p>
-                <p class="card-text">Équipement : <?=htmlentities($vehicule['equipement']);?></p>
-                <p class="card-text">Options : <?=htmlentities($vehicule['options']);?></p>
+                <p class="card-text"><strong>Prix : </strong><?=htmlentities($vehicule['prix']);?></p>
+                <p class="card-text"><strong>Kilométrage : </strong> <?=htmlentities($vehicule['kilometrage']);?></p>
+                <p class="card-text"><strong>Mise en circulation :</strong> <?=htmlentities($vehicule['anneeImmatriculation']);?></p>
+                <p class="card-text"><strong>Carburant : </strong><?=htmlentities($vehicule['carburant']);?></p>
+                <p class="card-text"><strong>Équipement : </strong> <?=htmlentities($vehicule['equipement']);?></p>
+                <p class="card-text"><strong>Options : </strong> <?=htmlentities($vehicule['options']);?></p>
                 <br>
             </div>
         <a href="occasions.php" class="btn px-4 me-md-2 parrot-color parrotbtn ">Voir nos véhicule d'Occasion</a>
