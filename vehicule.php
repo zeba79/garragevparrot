@@ -45,8 +45,8 @@ if (!$errors) {?>
                 <p class="card-text"><strong>Kilométrage : </strong> <?=htmlentities($vehicule['kilometrage']);?></p>
                 <p class="card-text"><strong>Mise en circulation :</strong> <?=htmlentities($vehicule['anneeImmatriculation']);?></p>
                 <p class="card-text"><strong>Carburant : </strong><?=htmlentities($vehicule['carburant']);?></p>
-                <p class="card-text"><strong>Équipement : </strong> <?=htmlentities($vehicule['equipement']);?></p>
-                <p class="card-text"><strong>Options : </strong> <?=htmlentities($vehicule['options']);?></p>
+                <p class="card-text"><strong>Équipement : </strong> <?=str_replace('<br />', '', $vehicule['equipement']);?></p>
+                <p class="card-text"><strong>Options : </strong> <?=str_replace('<br />', '', $vehicule['options']);?></p>
                 <br>
             </div>
         <a href="occasions.php" class="btn px-4 me-md-2 parrot-color parrotbtn ">Voir nos véhicule d'Occasion</a>

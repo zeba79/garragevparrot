@@ -55,7 +55,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
             $updateVehicule->bindValue(':id', $getId);
             $updateVehicule->execute();
             $messages[] = 'Le véhicule a bien été modifié !';
-            header('location: /admin/vehicules.php');
 
         }
 
@@ -70,7 +69,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 ?>
 <?php
 foreach ($messages as $message) {?>
-<div class="alert alert-success"><?=$message;?></div>
+<div class="alert alert-success mt-3"><?=$message;?></div>
 <?php }?>
 <?php
 foreach ($errors as $error) {?>
