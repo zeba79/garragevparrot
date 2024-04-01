@@ -28,13 +28,13 @@ foreach ($employes as $employe) {?>
                         <td scope="row"><?=$employe["prenom"];?></td>
                         <td scope="row"><?=$employe["role"];?></td>
                         <td>
-                            <a href="#" class="btn btn-primary">Modifier</a>
-                            <a href="#" class="btn btn-danger ">Supprimer</a>
+                            <a href="./modifierEmploye.php?id=<?=$employe["id"];?>" class="btn btn-primary" onclick=" return confirm('etes-vous sûr de vouloir modifier cet(te) employé(e) ?')" >Modifier</a>
+                            <a href="./supprimerEmploye.php?id=<?=$employe["id"];?>" class="btn btn-danger"  onclick=" return confirm('etes-vous sûr de vouloir supprimer cet(te) employé(e) ?') ">Supprimer</a>
                         </td>
                     </tr>
                     <?php }?>
                 </tbody>
-                <a href="./ajouterEmploye.php" class="btn btn-success" onclick=" return confirm('etes-vous sûr de vouloir ajouter un employé ?')" >Ajouter un employé </a>
+                <a href="./ajouterEmploye.php" class="btn btn-success" onclick=" return confirm('etes-vous sûr de vouloir ajouter un(e) employé(e) ?')" >Ajouter un employé </a>
 </table>
 
 
