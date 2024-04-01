@@ -34,7 +34,7 @@ foreach ($employes as $employe) {?>
                     </tr>
                     <?php }?>
                 </tbody>
-                <a href="deleteArticle.php" class="btn btn-success" onclick=" return confirm('etes-vous sûr de vouloir ajouter un employé ?')" >Ajouter un employé </a>
+                <a href="./ajouterEmploye.php" class="btn btn-success" onclick=" return confirm('etes-vous sûr de vouloir ajouter un employé ?')" >Ajouter un employé </a>
 </table>
 
 
