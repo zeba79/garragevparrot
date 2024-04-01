@@ -47,11 +47,11 @@ if (isset($_POST["ajoutVehicules"])) {
 ?>
 <?php
 foreach ($messages as $message) {?>
-<div class="alert alert-success"><?=$message;?></div>
+<div class="alert alert-success mt-3"><?=$message;?></div>
 <?php }?>
 <?php
 foreach ($errors as $error) {?>
-<div class="alert alert-danger"><?=$error;?></div>
+<div class="alert alert-danger mt-3"><?=$error;?></div>
 <?php }?>
 
 
