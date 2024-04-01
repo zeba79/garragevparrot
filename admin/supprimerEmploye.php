@@ -24,10 +24,10 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
             $stmt = $pdo->prepare($sql);
             $stmt->bindValue(":id", $getId);
             $stmt->execute();
-            $messages[] = 'l\'employé a  bien été supprimé';
+            $messages[] = 'l\'employé(e) a  bien été supprimé(e)';
         }
     } else {
-        $errors[] = 'aucun employé trouvé';
+        $errors[] = 'aucun employé(e) trouvé(e)';
     }
 
 } else {
@@ -44,8 +44,8 @@ foreach ($errors as $error) {?>
 <div class="alert alert-danger mt-3"><?=$error;?></div>
 <?php }?>
 
-<h1>Formulaire de suppression véhicule</h1>
-<a href="./vehicules.php" class="btn parrotbtn" >Retour à la page des véhicules</a>
+<h1>Formulaire de suppression employé(e)</h1>
+<a href="./employes.php" class="btn parrotbtn" >Retour à la page des employé(es)</a>
 
 <form action="" method="post">
     <div class="mb-3 mx-5">
@@ -58,7 +58,7 @@ foreach ($errors as $error) {?>
     </div>
 
         <div class="mb-3">
-            <input type="submit" name="supprimeremploye" value="Supprimer Employé" class="parrotbtn" >
+            <input type="submit" name="supprimeremploye" value="Supprimer Employé(e)" class="parrotbtn" >
         </div>
 
 </form>

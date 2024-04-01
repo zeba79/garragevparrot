@@ -47,7 +47,7 @@ if (isset($_POST["ajouterEmploye"])) {
         $stmt->bindParam(":email", $emailForm);
         $stmt->bindParam(":password", $hashedPassword);
         $stmt->execute();
-        $messages[] = "L'employé a bien été inserré ....";
+        $messages[] = "L'employé(e) a bien été inserré(e) ....";
 
     } else {
         $errors[] = "Veuillez remplir les champs ....";
@@ -92,7 +92,6 @@ foreach ($errors as $error) {?>
     <input type="submit" value="Ajouter" name="ajouterEmploye" class="btn parrotbtn mx-5">
 </form>
 
-</form>
 
 
 <?php
