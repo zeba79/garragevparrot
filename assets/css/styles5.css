@@ -24,12 +24,6 @@ body{
     font-weight: bold;
 }
 
-.avisClients{
-    display: flex;
-    flex-wrap: wrap;
-    visibility: hidden;
-}
-
 .commentaires{
     border: 1px solid black;
     background-color: #c0b4b4;
@@ -60,8 +54,9 @@ body{
     color: #D36F6F;
 }
 
-.commentForm, .hideComment, .hideForm{
+.commentForm, .hideComment, .hideForm, .avisClients{
     visibility: hidden;
+    height: 0px;
 }
 
 

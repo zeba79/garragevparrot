@@ -5,23 +5,24 @@ require_once './lib/pdo.php';
 
 $messages = [];
 $errors = [];
-if (isset($_POST['envoyer']) && !empty($_POST['nom']) && !empty($_POST['commentaire']) && !empty($_POST['note'])) {
+if (isset($_POST['envoyerFormulaire'])) {
+    if (!empty($_POST['nom']) && !empty($_POST['commentaire']) && !empty($_POST['note'])) {
 
-    $nomCommenaireForm = htmlentities($_POST['nom']);
-    $commentaireCommenaireForm = htmlentities($_POST['commentaire']);
-    $noteCommenaireForm = nl2br(htmlentities($_POST['note']));
+        $nomCommenaireForm = htmlentities($_POST['nom']);
+        $commentaireCommenaireForm = htmlentities($_POST['commentaire']);
+        $noteCommenaireForm = nl2br(htmlentities($_POST['note']));
 
-    $insererCommentaire = 'INSERT INTO comments(nom, commentaire, note) VALUES(:nom, :commentaire, :note)';
-    $stmt = $pdo->prepare($insererCommentaire);
-    $stmt->bindParam(":nom", $nomCommenaireForm);
-    $stmt->bindParam(":commentaire", $commentaireCommenaireForm);
-    $stmt->bindParam(":note", $noteCommenaireForm);
-    $stmt->execute();
+        $insererCommentaire = 'INSERT INTO comments(nom, commentaire, note) VALUES(:nom, :commentaire, :note)';
+        $stmt = $pdo->prepare($insererCommentaire);
+        $stmt->bindParam(":nom", $nomCommenaireForm);
+        $stmt->bindParam(":commentaire", $commentaireCommenaireForm);
+        $stmt->bindParam(":note", $noteCommenaireForm);
+        $stmt->execute();
 
-    $messages[] = 'Commentaire envoyé !';
-
-} else {
-    $errors[] = 'Veuillez remplir les champs';
+        $messages[] = 'Commentaire envoyé !';
+    } else {
+        $errors[] = 'Veuillez remplir les champs';
+    }
 }
 ?>
 
@@ -53,7 +54,7 @@ foreach ($errors as $error) {?>
       <input type="number" name="note" id="note" class="form-control" >
       <br>
 
-      <input type="submit" name="envoyer" class="parrotbtn">
+      <input type="submit" name="envoyerFormulaire" value="Envoyer" class="parrotbtn">
       <br>
       <br>
 

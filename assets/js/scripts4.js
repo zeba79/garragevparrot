@@ -6,8 +6,9 @@ readComment.addEventListener("click", afficherCommentaires);
 
 
 function afficherCommentaires(){
-  avisClients.setAttribute("style", "visibility:visible; background-color:gray");
-  hideComment.setAttribute("style", "visibility:visible;");
+  avisClients.setAttribute("style", "visibility:visible; height:100%");
+  hideComment.setAttribute("style", "visibility:visible;height:80%");
+  readComment.setAttribute("style", "visibility:hidden; height:100%");
 }
 
 const hideComment = document.querySelector(".hideComment");
@@ -16,18 +17,20 @@ hideComment.addEventListener("click", cacherCommentaires);
   function cacherCommentaires(){
     avisClients.setAttribute("style", "visibility:hidden;");
     hideComment.setAttribute("style", "visibility:hidden;");
+    readComment.setAttribute("style", "visibility:visible; ");
     
   }
 
 
 // Afficher le formulaire des avis
   const commentForm = document.querySelector(".commentForm")
-  const keepCpmment = document.querySelector(".keepComment");
-  keepCpmment.addEventListener("click", afficherformulaire);
+  const keepComment = document.querySelector(".keepComment");
+  keepComment.addEventListener("click", afficherformulaire);
 
   function afficherformulaire(){
-    commentForm.setAttribute("style", "visibility:visible; background-color:gray");
-    hideForm.setAttribute("style", "visibility:visible;");
+    commentForm.setAttribute("style", "visibility:visible; height:100%");
+    hideForm.setAttribute("style", "visibility:visible; height:40%");
+    keepComment.setAttribute("style", "visibility:hidden; height:100%");
   }
 
   // Cacher le formulaire des avis
@@ -37,4 +40,5 @@ hideComment.addEventListener("click", cacherCommentaires);
   function cacherFormulaire (){
     commentForm.setAttribute("style", "visibility:hidden;");
     hideForm.setAttribute("style", "visibility:hidden;");
+    keepComment.setAttribute("style", "visibility:visible;");
   }

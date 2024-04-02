@@ -41,7 +41,7 @@ foreach ($errors as $error) {?>
       <textarea name="message" id="" cols="30" rows="10" class="form-control" ></textarea>
       <br>
 
-      <input type="submit" name="Envoyer">
+      <input type="submit" name="Envoyer" class="parrotbtn ">
       <br>
       <br>
 

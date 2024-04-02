@@ -8,7 +8,6 @@ require_once './templates/main.php';
 
 $vehicules = getVehicules($pdo);
 $commentaires = getCommentaires($pdo);
-var_dump($_SESSION);
 
 ?>
 
@@ -23,12 +22,18 @@ require_once './templates/readComment.php';
 ?>
 
 <div class="avisClients">
+    <div class="container">
+        <div class="row">
+
+
 <?php
 foreach ($commentaires as $key => $commentaire) {
     require './templates/avisClients.php';
 }
 ?>
 </div>
+</div>
+ </div>
 
 <?php
 require_once './templates/leaveComment.php';

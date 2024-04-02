@@ -23,7 +23,7 @@ include_once './templates/header.php';
         <label for="password" class="form-label" required >Mot de passe</label>
         <input type="password" name="password" id="password" class="form-control">
     </div>
-    <input type="submit" value="Envoyer" name="loginUser" class="btn parrotbtn mx-5">
+    <input type="submit" value="Envoyer" name="loginUser" class="btn parrotbtn mx-5 mb-3">
 </form>
 
 <?php
