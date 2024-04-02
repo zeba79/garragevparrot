@@ -39,16 +39,16 @@ foreach ($vehicules as $vehicule) {?>
           <td scope="row"><?=$vehicule["prix"];?></td>
           <td>
             <a href="/admin/modifierVehicule.php?id=<?=$vehicule['id']?>" class="btn btn-primary"
-            onclick=" return confirm('etes-vous sûr de vouloir modifier ce véhicule ?')">Modifier</a>
+            onclick=" return confirm('Êtes-vous sûr de vouloir modifier ce véhicule ?')">Modifier</a>
             <a href="supprimerVehicule.php?id=<?=$vehicule['id']?>" class="btn btn-danger "
-            onclick=" return confirm('etes-vous sûr de vouloir supprimer ce véhicule ?')">Supprimer</a>
+            onclick=" return confirm('Êtes-vous sûr de vouloir supprimer ce véhicule ?')">Supprimer</a>
           </td>
 
         </tr>
         <?php }?>
       </tbody>
       <a href="./ajouterVehicules.php" class="btn btn-success"
-      onclick=" return confirm('etes-vous sûr de vouloir ajouter un véhicule ?')" >Ajouter un vehicule</a>
+      onclick=" return confirm('Êtes-vous sûr de vouloir ajouter un véhicule ?')" >Ajouter un vehicule</a>
 </table>
 
 <?php

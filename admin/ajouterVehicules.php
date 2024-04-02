@@ -56,7 +56,7 @@ foreach ($errors as $error) {?>
 
 
 <h1>Formulaire d'ajout véhicule</h1>
-<a href="./vehicules.php" class="btn parrotbtn" >Retour à la page des véhicules</a>
+<?=RETOUR_PAGE_VEHICULE;?>
 <form action="" method="post">
         <div class="mb-3">
             <label for="marque">Marque :</label>
@@ -92,7 +92,7 @@ foreach ($errors as $error) {?>
         </div> -->
 
         <div class="mb-3">
-            <input type="submit" name="ajoutVehicules" value="Envoyer" class="parrotbtn" >
+            <input type="submit" name="ajoutVehicules" value="Envoyer" onclick=" return confirm('Êtes-vous sûr de vouloir ajouter un véhicule ?')" class="parrotbtn" >
         </div>
 
 </form>

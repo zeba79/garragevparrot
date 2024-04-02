@@ -45,7 +45,7 @@ foreach ($errors as $error) {?>
 <?php }?>
 
 <h1>Formulaire de suppression employé(e)</h1>
-<a href="./employes.php" class="btn parrotbtn" >Retour à la page des employé(es)</a>
+<?=RETOUR_PAGE_EMPLOYE;?>
 
 <form action="" method="post">
     <div class="mb-3 mx-5">
@@ -58,7 +58,7 @@ foreach ($errors as $error) {?>
     </div>
 
         <div class="mb-3">
-            <input type="submit" name="supprimeremploye" value="Supprimer Employé(e)" class="parrotbtn" >
+            <input type="submit" name="supprimeremploye" value="Supprimer Employé(e)" onclick=" return confirm('Êtes-vous sûr de vouloir supprimer cet(te) employé(e) ?') " class="parrotbtn" >
         </div>
 
 </form>
