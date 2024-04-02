@@ -66,8 +66,8 @@ foreach ($errors as $error) {?>
 <?php }?>
 
 
-<h1>Formulaire d'ajout véhicule</h1>
-<a href="./employes.php" class="btn parrotbtn" >Retour à la page des employés</a>
+<h1>Formulaire d'ajout employé(e)</h1>
+<?=RETOUR_PAGE_EMPLOYE;?>
 <form action="" method="post">
     <div class="mb-3 mx-5">
         <label for="nom" class="form-label">Nom</label>
@@ -89,7 +89,7 @@ foreach ($errors as $error) {?>
         <label for="password" class="form-label" required >Mot de passe</label>
         <input type="password" name="password" id="password" class="form-control">
     </div>
-    <input type="submit" value="Ajouter" name="ajouterEmploye" class="btn parrotbtn mx-5">
+    <input type="submit" value="Ajouter" name="ajouterEmploye" onclick=" return confirm('Êtes-vous sûr de vouloir ajouter un(e) employé(e) ?')" class="btn parrotbtn mx-5">
 </form>
 
 

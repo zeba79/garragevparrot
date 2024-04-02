@@ -73,7 +73,7 @@ foreach ($errors as $error) {?>
 
 
 <h1>Formulaire de modification employé(e)</h1>
-<a href="./employes.php" class="btn parrotbtn" >Retour à la page des employé(es)</a>
+<?=RETOUR_PAGE_EMPLOYE;?>
 <form action="" method="post">
     <div class="mb-3 mx-5">
         <label for="nom" class="form-label">Nom</label>
@@ -95,7 +95,7 @@ foreach ($errors as $error) {?>
         <label for="password" class="form-label" value= "<?=$password;?>" required >Mot de passe</label>
         <input type="password" name="password" id="password" class="form-control">
     </div>
-    <input type="submit" name="modifierEmploye" value="modifier employé(e)"  class="btn parrotbtn mx-5">
+    <input type="submit" name="modifierEmploye" value="modifier employé(e)" onclick=" return confirm('Êtes-vous sûr de vouloir modifier cet(te) employé(e) ?')" class="btn parrotbtn mx-5">
 </form>
 </form>
 
