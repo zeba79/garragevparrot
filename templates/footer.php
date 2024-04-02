@@ -25,8 +25,11 @@
     </div>
 
     <div class="col mb-3">
-      <a href="index.php" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-        <p class="text-body-secondary copyright">© 2024 - Garage Vincent Parrot</p>
+      <p>Garage Vincent Parrot</p>
+      <p>255 Rue Parrot</p>
+      <p>31290 ParrotVille</p>
+      <a href="index.php" class="text-decoration-none">
+      <p class="text-body-secondary copyright">© 2024 - Garage Vincent Parrot</p>
       </a>
     </div>
 
