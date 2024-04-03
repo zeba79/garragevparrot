@@ -72,3 +72,25 @@ require_once './partials/avisClients.php';
 require_once './templates/footer.php';
 
 ?>
+
+<header class="d-flex flex-wrap align-items-center justify-content-center
+      justify-content-md-between py-3 mb-4 border-bottom parrot-color header_footer">
+
+      <p class="slogan">Votre partenaire de confiance</p>
+
+
+      <?php foreach ($mainMenu as $key => $menuItem) {?>
+          <li class="nav-item "><a href="<?=$key;?>" class="nav-link parrot-color
+            <?php if ($key === $currentPage) {
+    echo "parrotbtn";
+}?> ">
+              <?=htmlentities($menuItem["title_menu"]);?></a></li>
+        <?php }?>
+<?php
+if (isset($_SESSION["user"])) {?>
+        <a href="deconnexion.php" class="btn parrot-color parrotbtn">Déconnexion</a>
+        <?php } else {?>
+          <a href="connexion.php" class="btn parrot-color parrotbtn ">Connexion</a>
+<?php }?>
+
+<img src="./assets/img/logoVParrot.jpg" alt="Logo garage Parrot" width="30%">
