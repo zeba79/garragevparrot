@@ -5,7 +5,7 @@
 // La limite ne fonctionne pas sur la page indexs.php : à faire plus tard pour gérer la pagination
 function getVehicules(PDO $pdo, int $limit = null, int $page = null): array
 {
-    $sql = 'SELECT * From vehicules ORDER BY id ASC';
+    $sql = 'SELECT * FROM vehicules ';
 
     if ($limit && !$page) {
         $sql .= "LIMIT :limit";
