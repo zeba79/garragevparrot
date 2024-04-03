@@ -36,11 +36,6 @@ foreach ($errors as $error) {?>
 <div class="alert alert-danger mt-2"><?=$error;?></div>
 <?php }?>
 
-
-
-
-
-
     <div class="row commentForm">
     <form action="" method="post">
       <legend>Laisser un commentaire :</legend>

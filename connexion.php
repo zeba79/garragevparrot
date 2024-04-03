@@ -25,7 +25,7 @@ if (isset($_POST["loginUser"])) {
             //  sinon si le role est employe
         } elseif ($user["role"] === "employe") {
             // alors redirige vers interface admin
-            header(("location: mecanique.php"));
+            header(("location: employe/index.php"));
 
         } elseif ($user["role"] === "user") {
             header(("location: index.php"));
