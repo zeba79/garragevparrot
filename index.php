@@ -7,7 +7,7 @@ require_once './templates/header.php';
 require_once './templates/main.php';
 
 $vehicules = getVehicules($pdo, HOME_VEHICULES_LIMIT);
-$commentaires = getCommentairesById($pdo);
+$commentaires = getCommentairesById($pdo, HOME_COMMENTAIRES_LIMIT);
 
 ?>
 <div class="container">
@@ -27,12 +27,16 @@ $commentaires = getCommentairesById($pdo);
 require_once './templates/readComment.php';
 ?>
 
+
+
 <div class="avisClients">
+<div class="row">
     <?php
 foreach ($commentaires as $key => $commentaire) {
     require './templates/avisClients.php';
 }
 ?>
+</div>
 </div>
 <?php
 require_once './templates/leaveComment.php';

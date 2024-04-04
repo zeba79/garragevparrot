@@ -1,9 +1,18 @@
 <?php
 
-function getCommentairesById(PDO $pdo): array
+function getCommentairesById(PDO $pdo, int $limit = null): array
 {
-    $sql = 'SELECT * FROM comments ORDER BY id DESC limit 3';
+    $sql = 'SELECT * FROM comments ORDER BY id DESC ';
+    if ($limit) {
+        $sql .= "LIMIT :limit";
+    }
+
     $recupererCommentaires = $pdo->prepare($sql);
+
+    if ($limit) {
+        $recupererCommentaires->bindValue(":limit", $limit, PDO::PARAM_INT);
+    }
+
     $recupererCommentaires->execute();
     $commentaires = $recupererCommentaires->fetchAll(PDO::FETCH_ASSOC);
     return $commentaires;
