@@ -8,26 +8,26 @@ $errors = [];
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     $getId = $_GET['id'];
 
-    $sql = "SELECT * FROM users WHERE id = :id";
+    $sql = "SELECT * FROM comments WHERE id = :id";
     $stmt = $pdo->prepare($sql);
     $stmt->bindValue(":id", $getId);
     $stmt->execute();
 
     if ($stmt->rowCount() > 0) {
-        $recupEmploye = $stmt->fetch(PDO::FETCH_ASSOC);
+        $recupCommentaire = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        $nom = $recupEmploye["nom"];
-        $prenom = $recupEmploye["prenom"];
+        $nom = $recupCommentaire["nom"];
+        $commentaire = $recupCommentaire["commentaire"];
 
-        if (isset($_POST["supprimeremploye"])) {
-            $sql = "DELETE FROM users WHERE id = :id";
+        if (isset($_POST["supprimerCommentaire"])) {
+            $sql = "DELETE FROM comments WHERE id = :id";
             $stmt = $pdo->prepare($sql);
             $stmt->bindValue(":id", $getId);
             $stmt->execute();
-            $messages[] = 'l\'employé(e) a  bien été supprimé(e)';
+            $messages[] = 'Le commentaire ) a  bien été supprimé';
         }
     } else {
-        $errors[] = 'aucun employé(e) trouvé(e)';
+        $errors[] = 'aucun commentaire trouvé';
     }
 
 } else {
@@ -44,21 +44,21 @@ foreach ($errors as $error) {?>
 <div class="alert alert-danger mt-3"><?=$error;?></div>
 <?php }?>
 
-<h1>Formulaire de suppression employé(e)</h1>
-<?=RETOUR_PAGE_EMPLOYE;?>
+<h1>Formulaire de suppression commentaire</h1>
+<?=RETOUR_PAGE_COMMENTAIRE;?>
 
 <form action="" method="post">
     <div class="mb-3 mx-5">
-        <label for="nom" class="form-label">Nom</label>
+        <label for="nom" class="form-label">Nom : </label>
         <input type="text" name="nom" id="nom" value= "<?=$nom;?>" class="form-control" required >
     </div>
     <div class="mb-3 mx-5">
-        <label for="prenom" class="form-label">Prénom</label>
-        <input type="text" name="prenom" id="prenom" value= "<?=$prenom;?>" class="form-control" required >
+        <label for="commentaire" class="form-label"> Commentaire : </label>
+        <textarea name="commentaire" id="commentaire" cols="30" rows="10" class="form-control" required><?=nl2br($commentaire);?></textarea>
     </div>
 
         <div class="mb-3">
-            <input type="submit" name="supprimeremploye" value="Supprimer Employé(e)" onclick=" return confirm('Êtes-vous sûr de vouloir supprimer cet(te) employé(e) ?') " class="parrotbtn" >
+            <input type="submit" name="supprimerCommentaire" value="Supprimer commentaire" onclick=" return confirm('Êtes-vous sûr de vouloir supprimer ce commentaire ?') " class="parrotbtn" >
         </div>
 
 </form>

@@ -57,11 +57,11 @@ foreach ($errors as $error) {?>
         <input type="text" name="nom" id="nom" class="form-control" required >
     </div>
     <div class="mb-3 mx-5">
-        <label for="commentaire" class="form-label">commentaire : </label>
+        <label for="commentaire" class="form-label">Commentaire : </label>
         <textarea name="commentaire" id="commentaire" cols="30" rows="10" class="form-control" required></textarea>
     </div>
     <div class="mb-3 mx-5">
-        <label for="note" class="form-label">note : </label>
+        <label for="note" class="form-label">Note : </label>
         <input type="number" name="note" id="note" class="form-control" required >
     </div>
     <div class="mb-3 mx-5">

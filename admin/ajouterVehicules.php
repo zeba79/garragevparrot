@@ -85,7 +85,7 @@ foreach ($errors as $error) {?>
         </div> -->
 
         <div class="mb-3">
-            <input type="submit" name="ajoutVehicules" value="Envoyer" onclick=" return confirm('Êtes-vous sûr de vouloir ajouter un véhicule ?')" class="parrotbtn" >
+            <input type="submit" name="ajoutVehicules" value="Ajouter véhicule" onclick=" return confirm('Êtes-vous sûr de vouloir ajouter un véhicule ?')" class="parrotbtn" >
         </div>
 
 </form>
