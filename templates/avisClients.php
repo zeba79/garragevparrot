@@ -1,5 +1,7 @@
   <div class="commentaires">
-    <p><?=htmlentities($commentaire['nom']);?></p>
-    <p><?=htmlentities($commentaire['commentaire']);?></p>
-    <p><?=htmlentities($commentaire['note']);?></p>
+    <p><?=$commentaire['nom'];?></p>
+    <p><?=nl2br(str_replace('<br />', '', $commentaire['commentaire']));?></p>
+    <p><?=$commentaire['note'];?></p>
   </div>
+
+

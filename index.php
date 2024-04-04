@@ -7,7 +7,7 @@ require_once './templates/header.php';
 require_once './templates/main.php';
 
 $vehicules = getVehicules($pdo, HOME_VEHICULES_LIMIT);
-$commentaires = getCommentaires($pdo);
+$commentaires = getCommentairesById($pdo);
 
 ?>
 <div class="container">

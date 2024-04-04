@@ -8,46 +8,30 @@
 <?php
 require_once __DIR__ . "/../lib/pdo.php";
 require_once __DIR__ . "/../lib/employe.php";
-require_once __DIR__ . "/../admin/templates/header.php";
+require_once __DIR__ . "/../employe/templates/header.php";
 ?>
 
 <?php
 $messages = [];
 $errors = [];
-if (isset($_POST["ajouterEmploye"])) {
-    if (!empty($_POST["nom"]) && !empty(["prenom"]) && !empty(["role"]) && !empty(["email"]) && !empty(["password"])) {
+if (isset($_POST["ajouterCommentaire"])) {
+    if (!empty($_POST["nom"]) && !empty(["commentaire"]) && !empty(["note"]) && !empty(["statut"])) {
         // création des variables de connexion formulaire
-        $nomForm = $_POST['nom'];
-        $prenomForm = $_POST['prenom'];
-        $roleForm = $_POST['role'];
-        $emailForm = $_POST['email'];
-        $passwordForm = $_POST['password'];
-
-        // Récupération de 'lutilisateur en base de données
-        $selectQuery = "SELECT * FROM users WHERE email = :email";
-        $stmt = $pdo->prepare($selectQuery);
-        $stmt->bindParam(':email', $emailForm);
-        $stmt->execute();
-
-        //  Vérifier l'unicité de l'utilisateur en BDD
-        if ($stmt->rowCount() > 0) {
-            $errors[] = "Désolé, cette adresse mail existe déjà dans la base de donnée...";
-        }
-
-        // Hashage du mot de passe saisi coté formulaire
-        $hashedPassword = password_hash($passwordForm, PASSWORD_DEFAULT);
+        $nomForm = htmlentities($_POST['nom']);
+        $commentaireForm = nl2br(htmlentities($_POST['commentaire']));
+        $noteForm = htmlentities($_POST['note']);
+        $statutForm = htmlentities($_POST['statut']);
 
         // Inserer l'utilisateur en BDD
-        $insertquery = "INSERT INTO users(nom, prenom, role, email, password )
-        VALUES (:nom, :prenom, :role, :email, :password )";
+        $insertquery = "INSERT INTO comments(nom, commentaire, note, statut )
+        VALUES (:nom, :commentaire, :note, :statut)";
         $stmt = $pdo->prepare($insertquery);
         $stmt->bindParam(":nom", $nomForm);
-        $stmt->bindParam(":prenom", $prenomForm);
-        $stmt->bindParam(":role", $roleForm);
-        $stmt->bindParam(":email", $emailForm);
-        $stmt->bindParam(":password", $hashedPassword);
+        $stmt->bindParam(":commentaire", $commentaireForm);
+        $stmt->bindParam(":note", $noteForm);
+        $stmt->bindParam(":statut", $statutForm);
         $stmt->execute();
-        $messages[] = "L'employé(e) a bien été inserré(e) ....";
+        $messages[] = "Le commentaire a bien été inserré ....";
 
     } else {
         $errors[] = "Veuillez remplir les champs ....";
@@ -67,34 +51,30 @@ foreach ($errors as $error) {?>
 
 
 <h1>Formulaire d'ajout employé(e)</h1>
-<?=RETOUR_PAGE_EMPLOYE;?>
+<?=RETOUR_PAGE_COMMENTAIRE;?>
 <form action="" method="post">
     <div class="mb-3 mx-5">
-        <label for="nom" class="form-label">Nom</label>
+        <label for="nom" class="form-label">Nom : </label>
         <input type="text" name="nom" id="nom" class="form-control" required >
     </div>
     <div class="mb-3 mx-5">
-        <label for="prenom" class="form-label">Prénom</label>
-        <input type="text" name="prenom" id="prenom" class="form-control" required >
+        <label for="commentaire" class="form-label">commentaire : </label>
+        <textarea name="commentaire" id="commentaire" cols="30" rows="10" class="form-control" required></textarea>
     </div>
     <div class="mb-3 mx-5">
-        <label for="role" class="form-label">Role</label>
-        <input type="text" name="role" id="role" class="form-control" required >
+        <label for="note" class="form-label">note : </label>
+        <input type="number" name="note" id="note" class="form-control" required >
     </div>
     <div class="mb-3 mx-5">
-        <label for="email" class="form-label" required >Email</label>
-        <input type="email" name="email" id="email" class="form-control">
+        <label for="statut" class="form-label">Statut : </label>
+        <input type="text" name="statut" id="statut" class="form-control" required >
     </div>
-    <div class="mb-3 mx-5">
-        <label for="password" class="form-label" required >Mot de passe</label>
-        <input type="password" name="password" id="password" class="form-control">
-    </div>
-    <input type="submit" value="Ajouter" name="ajouterEmploye" onclick=" return confirm('Êtes-vous sûr de vouloir ajouter un(e) employé(e) ?')" class="btn parrotbtn mx-5">
+    <input type="submit" value="Ajouter commentaire" name="ajouterCommentaire" onclick=" return confirm('Êtes-vous sûr de vouloir ajouter ce commentaire ?')" class="btn parrotbtn mx-5">
 </form>
 
 
 
 <?php
-require_once __DIR__ . "/../admin/templates/footer.php";
+require_once __DIR__ . "/../employe/templates/footer.php";
 ?>
 

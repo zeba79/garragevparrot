@@ -1,19 +1,19 @@
 <?php
 require_once __DIR__ . "/../lib/pdo.php";
-require_once __DIR__ . "/../lib/employe.php";
-require_once __DIR__ . "/../admin/templates/header.php";
+require_once __DIR__ . "/../lib/commentaire.php";
+require_once __DIR__ . "/../employe/templates/header.php";
 
-$employes = getEmployesByRole($pdo);
+$commentaires = getAllCommentaires($pdo);
 ?>
 
-<h1>Liste des employés</h1>
+<h1>Commentaires</h1>
 <table class="table">
     <thead>
         <tr>
         <th scope="col">#</th>
         <th scope="col">Nom</th>
-        <th scope="col">Prénom</th>
-        <th scope="col">Rôle</th>
+        <th scope="col">Commentaire</th>
+        <th scope="col">Note</th>
         <th scope="col">Actions</th>
         </tr>
     </thead>
@@ -21,20 +21,19 @@ $employes = getEmployesByRole($pdo);
     <tbody>
         <tr>
                 <?php
-foreach ($employes as $employe) {?>
-
-                        <td scope="row"><?=$employe["id"];?></td>
-                        <td scope="row"><?=$employe["nom"];?></td>
-                        <td scope="row"><?=$employe["prenom"];?></td>
-                        <td scope="row"><?=$employe["role"];?></td>
+foreach ($commentaires as $commentaire) {?>
+                        <td scope="row"><?=$commentaire["id"];?></td>
+                        <td scope="row"><?=$commentaire["nom"];?></td>
+                        <td scope="row"><?=$commentaire["commentaire"];?></td>
+                        <td scope="row"><?=$commentaire["note"];?></td>
                         <td>
-                            <a href="./modifierEmploye.php?id=<?=$employe["id"];?>" class="btn btn-primary" onclick=" return confirm('Êtes-vous sûr de vouloir modifier cet(te) employé(e) ?')" >Modifier</a>
-                            <a href="./supprimerEmploye.php?id=<?=$employe["id"];?>" class="btn btn-danger"  onclick=" return confirm('Êtes-vous sûr de vouloir supprimer cet(te) employé(e) ?') ">Supprimer</a>
+                            <a href="./modifierCommentaire.php?id=<?=$commentaire["id"];?>" class="btn btn-primary" onclick=" return confirm('Êtes-vous sûr de vouloir modifier ce commentaire ?')" >Modifier</a>
+                            <a href="./supprimerCommentaire.php?id=<?=$commentaire["id"];?>" class="btn btn-danger"  onclick=" return confirm('Êtes-vous sûr de vouloir supprimer ce commentaire ?') ">Supprimer</a>
                         </td>
                     </tr>
                     <?php }?>
                 </tbody>
-                <a href="./ajouterEmploye.php" class="btn btn-success" onclick=" return confirm('Êtes-vous sûr de vouloir ajouter un(e) employé(e) ?')" >Ajouter un employé </a>
+                <a href="./ajouterCommentaire.php" class="btn btn-success" onclick=" return confirm('Êtes-vous sûr de vouloir ajouter ce commentaire ?')" >Ajouter un commentaire </a>
 </table>
 
 
