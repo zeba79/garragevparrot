@@ -7,7 +7,6 @@
 
 <?php
 require_once __DIR__ . "/../lib/pdo.php";
-require_once __DIR__ . "/../lib/employe.php";
 require_once __DIR__ . "/../employe/templates/header.php";
 ?>
 
@@ -50,7 +49,7 @@ foreach ($errors as $error) {?>
 <?php }?>
 
 
-<h1>Formulaire d'ajout employé(e)</h1>
+<h1>Formulaire d'ajout commentaire</h1>
 <?=RETOUR_PAGE_COMMENTAIRE;?>
 <form action="" method="post">
     <div class="mb-3 mx-5">

@@ -14,6 +14,7 @@ $commentaires = getAllCommentaires($pdo);
         <th scope="col">Nom</th>
         <th scope="col">Commentaire</th>
         <th scope="col">Note</th>
+        <th scope="col">statut</th>
         <th scope="col">Actions</th>
         </tr>
     </thead>
@@ -26,6 +27,7 @@ foreach ($commentaires as $commentaire) {?>
                         <td scope="row"><?=$commentaire["nom"];?></td>
                         <td scope="row"><?=$commentaire["commentaire"];?></td>
                         <td scope="row"><?=$commentaire["note"];?></td>
+                        <td scope="row"><?=$commentaire["statut"];?></td>
                         <td>
                             <a href="./modifierCommentaire.php?id=<?=$commentaire["id"];?>" class="btn btn-primary" onclick=" return confirm('Êtes-vous sûr de vouloir modifier ce commentaire ?')" >Modifier</a>
                             <a href="./supprimerCommentaire.php?id=<?=$commentaire["id"];?>" class="btn btn-danger"  onclick=" return confirm('Êtes-vous sûr de vouloir supprimer ce commentaire ?') ">Supprimer</a>
