@@ -27,8 +27,8 @@
       <div class="col mb-3">
       <h5>Adresse postale :</h5>
         <p>Garage Vincent Parrot</p>
-        <p>255 Rue Parrot</p>
-        <p>31290 ParrotVille</p>
+        <p>255 Rue Parrot - 31290 ParrotVille</p>
+        <p>garageparrot@parrot.fr</p>
         <p>04 75 25 25 25</p>
         <a href="index.php" class="text-decoration-none text-body-secondary copyright">
         © 2024 - Garage Vincent Parrot
