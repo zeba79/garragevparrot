@@ -21,7 +21,7 @@ foreach ($messages as $message) {?>
 foreach ($errors as $error) {?>
 <div class="alert alert-danger mt-2"><?=$error;?></div>
 <?php }?>
-
+<h3 class="text text-center">Contactez-nous par téléphone au : 04 75 25 25 25</h3>
 <div class="contacterAtelier">
 
     <form action="" method="post">

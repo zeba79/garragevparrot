@@ -79,10 +79,7 @@ foreach ($errors as $error) {?>
             <label for="options">Options :</label>
             <textarea name="options" id="options" cols="30" rows="5" class="form-control" required></textarea>
         </div>
-        <!-- <div class="mb-3">
-            <label for="image">Image :</label>
-            <input type="file" name="image" id="image" value="Télécharger image" class="form-control">
-        </div> -->
+
 
         <div class="mb-3">
             <input type="submit" name="ajoutVehicules" value="Ajouter véhicule" onclick=" return confirm('Êtes-vous sûr de vouloir ajouter un véhicule ?')" class="parrotbtn" >

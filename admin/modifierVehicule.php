@@ -32,8 +32,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         $equipement = str_replace('<br />', '', $vehiculeRecupere["equipement"]);
         $options = str_replace('<br />', '', $vehiculeRecupere["options"]);
 
-        // $messages[] = 'Véhicule bien récupéré';
-
         if (isset($_POST['modifierVehicule'])) {
             $marqueUpdate = htmlentities($_POST["marque"]);
             $prixUpdate = htmlentities($_POST["prix"]);
@@ -43,7 +41,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
             $equipementUpdate = nl2br(htmlentities($_POST["equipement"]));
             $optionsUpdate = nl2br(htmlentities($_POST["options"]));
 
-            $modifierVehicule = 'UPDATE vehicules SET marque =:marque , prix =:prix, kilometrage = :kilometrage, anneeImmatriculation = :anneeImmatriculation , carburant = :carburant, equipement = :equipement, options = :options WHERE id = :id ';
+            $modifierVehicule = 'UPDATE vehicules SET marque =:marque , prix =:prix,
+            kilometrage = :kilometrage,anneeImmatriculation = :anneeImmatriculation ,
+            carburant = :carburant, equipement = :equipement, options = :options WHERE id = :id ';
             $updateVehicule = $pdo->prepare($modifierVehicule);
             $updateVehicule->bindValue(':marque', $marqueUpdate);
             $updateVehicule->bindValue(':prix', $prixUpdate);
