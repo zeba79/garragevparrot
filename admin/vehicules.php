@@ -12,7 +12,13 @@ require_once __DIR__ . "/../admin/templates/header.php";
 //     $page = 1;
 // }
 
-$vehicules = getVehicules($pdo);
+if (isset($_GET["page"])) {
+    $page = (int) $_GET["page"];
+} else {
+    $page = 1;
+}
+
+$vehicules = getVehicules($pdo, ADMIN_VEHICULES_LIMIT, $page);
 
 $totalPages = ceil(getTotalVehicules($pdo) / ADMIN_VEHICULES_LIMIT);
 ?>
