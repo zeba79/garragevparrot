@@ -14,6 +14,7 @@ require_once __DIR__ . "/../admin/templates/header.php";
 
 if (isset($_GET["page"])) {
     $page = (int) $_GET["page"];
+    var_dump($page);
 } else {
     $page = 1;
 }
