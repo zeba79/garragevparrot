@@ -33,7 +33,9 @@ require_once './templates/readComment.php';
 <div class="row">
     <?php
 foreach ($commentaires as $key => $commentaire) {
+
     require './templates/avisClients.php';
+
 }
 ?>
 </div>

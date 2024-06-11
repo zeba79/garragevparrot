@@ -60,3 +60,11 @@ body{
 }
 
 
+.imgRotate {
+    transform: rotate(180deg);
+}
+
+.stars{
+    color: #FFFF00;
+    font-size: 2rem;
+}

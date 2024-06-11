@@ -5,23 +5,17 @@ require_once __DIR__ . "/../lib/pdo.php";
 require_once __DIR__ . "/../lib/vehicule.php";
 require_once __DIR__ . "/../admin/templates/header.php";
 
-// if (isset($_GET["page"])) {
-//     echo $_GET["page"];
-//     $page = (int) $_GET["page"];
-// } else {
-//     $page = 1;
-// }
+$totalPages = ceil(getTotalVehicules($pdo) / ADMIN_VEHICULES_LIMIT);
 
-if (isset($_GET["page"])) {
+//  récupération du numéro de page
+if (isset($_GET["page"]) && $_GET["page"] > 0 && $_GET["page"] <= $totalPages) {
     $page = (int) $_GET["page"];
-    var_dump($page);
 } else {
     $page = 1;
 }
-
+$currentPage = $page;
 $vehicules = getVehicules($pdo, ADMIN_VEHICULES_LIMIT, $page);
 
-$totalPages = ceil(getTotalVehicules($pdo) / ADMIN_VEHICULES_LIMIT);
 ?>
 <h1>Liste des véhicules</h1>
 <table class="table">
@@ -62,12 +56,15 @@ foreach ($vehicules as $vehicule) {?>
 if ($totalPages > 1) {?>
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link"
+    href="?page=<?=$currentPage - 1;?>">
+    <img src="/assets/img/suivant.png" alt="page précédente" width="20px" class="imgRotate" width="20px"></a></li>
 <?php
 for ($i = 1; $i <= $totalPages; $i++) {?>
-    <li class="page-item"><a class="page-link" href="?page=<?=$i?>"><?=$i?></a></li>
+    <li class="page-item paginClick"><a class="page-link " href="?page=<?=$i?>"><?=$i;?></a></li>
     <?php }?>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+
+    <li class="page-item"><a class="page-link" href="?page=<?=$currentPage + 1;?>"><img src="/assets/img/suivant.png" alt="page suivante" width="20px"></a></li>
   </ul>
 </nav>
 <?php }

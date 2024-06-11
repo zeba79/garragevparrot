@@ -49,6 +49,8 @@ foreach ($errors as $error) {?>
       <input type="number" name="note" id="note" class="form-control" >
       <br>
 
+      <i >&#9733 &#9733</i>
+
       <input type="submit" name="envoyerFormulaire" value="Envoyer" class="parrotbtn">
       <br>
       <br>
