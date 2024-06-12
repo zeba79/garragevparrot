@@ -1,9 +1,7 @@
 *{
     margin: 0;
     padding: 10;
-
 }
-
 
 body{
     background-color: #EBE5E5;
@@ -16,26 +14,38 @@ body{
 }
 
 .slogan{
-    color: #D92332;
-    display: flex;
-    justify-content: space-between;
-    /* position: absolute; */
-    
+    color: #D92332;   
     font-weight: bold;
 }
 
 .commentaires{
-    border: 1px solid black;
-    background-color: #c0b4b4;
+    border: 1px solid #533E3E;
+    background-color: #EBE5E5;
     margin: 5px;
     padding: 5px;
+    width: 20rem;
+    height: 15rem;
     border-radius: 10px;
-    width: 30%;
+    box-shadow: 5px 3px 5px #D36F6F;
 }
+
+.avisClients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.nomCommentaire{
+    font-size: 1.5rem;
+    color: #533E3E;
+    font-weight: bold;
+}
+
 .copyright{
     font-size: 1.2rem;
     font-weight: bold;
-    color: #D92332;
 }
 
 .parrot-color{
@@ -65,6 +75,6 @@ body{
 }
 
 .stars{
-    color: #FFFF00;
-    font-size: 2rem;
+    color: #FFD700;
+    font-size: 3rem;
 }

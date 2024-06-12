@@ -7,7 +7,7 @@ $not4 = "&#9733 &#9733 &#9733 &#9733";
 $not5 = "&#9733 &#9733 &#9733 &#9733 &#9733";
 ?>
   <div class="commentaires">
-    <p><?=$commentaire['nom'];?></p>
+    <p class="nomCommentaire"><?=$commentaire['nom'];?></p>
     <p><?=nl2br(str_replace('<br />', '', $commentaire['commentaire']));?></p>
     <p class="stars"><?php
 switch ($note) {

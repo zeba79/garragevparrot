@@ -13,7 +13,7 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
   integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
-<link rel="stylesheet" href="/assets/css/styles4.css">
+<link rel="stylesheet" href="/assets/css/styles2.css">
 <script src="/assets/js/scripts1.js" defer></script>
   <title><?=htmlentities($mainMenu[$currentPage]["head_title"]);?></title>
 </head>
@@ -22,7 +22,9 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
   <nav class="navbar navbar-expand-lg navbar-light  parrot-color header_footer">
     <div class="container slogan">
 
-      <img src="./assets/img/logoVParrot.jpg" alt="Logo garage Parrot" width="30%">
+    <a href="index.php">
+    <img src="./assets/img/logoVParrot.jpg" alt="Logo garage Parrot" width="30%">
+    </a>
       <p>Votre partenaire de confiance</p>
     </div>
   <div class="container">

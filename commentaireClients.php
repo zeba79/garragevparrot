@@ -46,11 +46,8 @@ foreach ($errors as $error) {?>
       <textarea type="text" name="commentaire" id="commentaire" class="form-control" ></textarea>
 
       <label for="note" class="form-label" > Note :</label>
-      <input type="number" name="note" id="note" class="form-control" >
+      <input type="number" name="note" id="note" value="1" min="1" max="5" class="form-control" >
       <br>
-
-      <i >&#9733 &#9733</i>
-
       <input type="submit" name="envoyerFormulaire" value="Envoyer" class="parrotbtn">
       <br>
       <br>
