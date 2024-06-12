@@ -1,4 +1,5 @@
-<?php $note = $commentaire['note'];
+<?php
+$note = $commentaire['note'];
 $not1 = "&#9733";
 $not2 = "&#9733 &#9733";
 $not3 = "&#9733 &#9733 &#9733";
