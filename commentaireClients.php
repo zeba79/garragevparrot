@@ -6,17 +6,19 @@ require_once './lib/pdo.php';
 $messages = [];
 $errors = [];
 if (isset($_POST['envoyerFormulaire'])) {
-    if (!empty($_POST['nom']) && !empty($_POST['commentaire']) && !empty($_POST['note'])) {
+    if (!empty($_POST['nom'])
+        && !empty($_POST['commentaire'])
+        && !empty($_POST['note'])) {
 
-        $nomCommenaireForm = htmlentities($_POST['nom']);
-        $commentaireCommenaireForm = htmlentities($_POST['commentaire']);
-        $noteCommenaireForm = nl2br(htmlentities($_POST['note']));
+        $nomCommentaireForm = htmlentities($_POST['nom']);
+        $commentaireCommentaireForm = htmlentities($_POST['commentaire']);
+        $noteCommentaireForm = nl2br(htmlentities($_POST['note']));
 
         $insererCommentaire = 'INSERT INTO comments(nom, commentaire, note) VALUES(:nom, :commentaire, :note)';
         $stmt = $pdo->prepare($insererCommentaire);
-        $stmt->bindParam(":nom", $nomCommenaireForm);
-        $stmt->bindParam(":commentaire", $commentaireCommenaireForm);
-        $stmt->bindParam(":note", $noteCommenaireForm);
+        $stmt->bindParam(":nom", $nomCommentaireForm);
+        $stmt->bindParam(":commentaire", $commentaireCommentaireForm);
+        $stmt->bindParam(":note", $noteCommentaireForm);
         $stmt->execute();
 
         $messages[] = 'Commentaire envoyé !';
