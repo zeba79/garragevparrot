@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__ . "/../config/config.php";
 require_once __DIR__ . "/../lib/pdo.php";
 require_once __DIR__ . "/../lib/vehicule.php";
@@ -9,11 +8,12 @@ $totalPages = ceil(getTotalVehicules($pdo) / ADMIN_VEHICULES_LIMIT);
 
 //  récupération du numéro de page
 if (isset($_GET["page"]) && $_GET["page"] > 0 && $_GET["page"] <= $totalPages) {
-    $page = (int) $_GET["page"];
+    (int) $page = (int) $_GET["page"];
 } else {
-    $page = 1;
+    (int) $page = 1;
 }
-$currentPage = $page;
+
+(int) $currentPage = $page;
 $vehicules = getVehicules($pdo, ADMIN_VEHICULES_LIMIT, $page);
 
 ?>
