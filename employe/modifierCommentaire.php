@@ -82,7 +82,6 @@ foreach ($errors as $error) {?>
     <input type="submit" value="Modifier commentaire" name="mofifierCommentaire" onclick=" return confirm('Êtes-vous sûr de vouloir modifier ce commentaire ?')" class="btn parrotbtn mx-5">
 </form>
 
-
 <?php
 require_once __DIR__ . "/../employe/templates/footer.php";
 ?>
