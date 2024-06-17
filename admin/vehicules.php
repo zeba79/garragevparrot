@@ -94,8 +94,7 @@ for ($i = 1; $i <= $totalPages; $i++) {?>
           </li>
   </ul>
 </nav>
-<?php }
-?>
+<?php }?>
 
 
 <?php

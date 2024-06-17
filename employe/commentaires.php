@@ -3,7 +3,19 @@ require_once __DIR__ . "/../lib/pdo.php";
 require_once __DIR__ . "/../lib/commentaire.php";
 require_once __DIR__ . "/../employe/templates/header.php";
 
-$commentaires = getAllCommentaires($pdo);
+$totalComments = ceil(getTotalComments($pdo) / ADMIN_COMMENTS_LIMIT);
+var_dump($totalComments);
+
+//  récupération du numéro de page
+if (isset($_GET["page"]) && $_GET["page"] > 0 && $_GET["page"] <= $totalComments) {
+    (int) $page = (int) $_GET["page"];
+} else {
+    (int) $page = 1;
+}
+
+$currentPage = (int) $page;
+$commentaires = getCommentairesById($pdo, ADMIN_COMMENTS_LIMIT, $page);
+
 ?>
 
 <h1>Commentaires</h1>
@@ -37,6 +49,35 @@ foreach ($commentaires as $commentaire) {?>
                 </tbody>
                 <a href="./ajouterCommentaire.php" class="btn btn-success" onclick=" return confirm('Êtes-vous sûr de vouloir ajouter ce commentaire ?')" >Ajouter un commentaire </a>
 </table>
+
+<?php
+if ($totalComments > 1) {?>
+    <nav aria-label="Page navigation example">
+  <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link"
+              href="?page=<?=$currentPage - 1;?>">
+              <img src="/assets/img/suivant.png" alt="page précédente" width="20px" class="imgRotate" width="20px">
+            </a>
+          </li>
+
+      <?php
+for ($i = 1; $i <= $totalComments; $i++) {?>
+          <li class="page-item <?php if ($i === $page) {echo "active";}?>" >
+            <a class="page-link " href="?page=<?=$i?>">
+              <?=$i;?>
+            </a>
+          </li>
+          <?php }?>
+
+          <li class="page-item">
+            <a class="page-link" href="?page=<?=$currentPage + 1;?>">
+              <img src="/assets/img/suivant.png" alt="page suivante" width="20px">
+            </a>
+          </li>
+  </ul>
+</nav>
+<?php }?>
 
 
 <?php

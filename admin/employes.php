@@ -13,7 +13,7 @@ if (isset($_GET["page"]) && $_GET["page"] > 0 && $_GET["page"] <= $totalEmployee
     (int) $page = 1;
 }
 
-(int) $currentPage = $page;
+$currentPage = (int) $page;
 $employes = getEmployesByRole($pdo, ADMIN_EMPLOYEES_LIMIT, $page);
 ?>
 
