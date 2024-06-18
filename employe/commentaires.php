@@ -4,7 +4,6 @@ require_once __DIR__ . "/../lib/commentaire.php";
 require_once __DIR__ . "/../employe/templates/header.php";
 
 $totalComments = ceil(getTotalComments($pdo) / ADMIN_COMMENTS_LIMIT);
-var_dump($totalComments);
 
 //  récupération du numéro de page
 if (isset($_GET["page"]) && $_GET["page"] > 0 && $_GET["page"] <= $totalComments) {
@@ -47,7 +46,10 @@ foreach ($commentaires as $commentaire) {?>
                     </tr>
                     <?php }?>
                 </tbody>
-                <a href="./ajouterCommentaire.php" class="btn btn-success" onclick=" return confirm('Êtes-vous sûr de vouloir ajouter ce commentaire ?')" >Ajouter un commentaire </a>
+                <a href="./ajouterCommentaire.php" class="btn btn-success"
+                    onclick=" return confirm('Êtes-vous sûr de vouloir ajouter ce commentaire ?')" >
+                    Ajouter un commentaire
+                </a>
 </table>
 
 <?php
@@ -63,8 +65,8 @@ if ($totalComments > 1) {?>
 
       <?php
 for ($i = 1; $i <= $totalComments; $i++) {?>
-          <li class="page-item <?php if ($i === $page) {echo "active";}?>" >
-            <a class="page-link " href="?page=<?=$i?>">
+          <li class="page-item parrotPagination ">
+            <a class="page-link <?php if ($i === $page) {echo "parrotbtn";}?>" href="?page=<?=$i?>">
               <?=$i;?>
             </a>
           </li>

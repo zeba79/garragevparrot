@@ -80,8 +80,8 @@ if ($totalPages > 1) {?>
           </li>
       <?php
 for ($i = 1; $i <= $totalPages; $i++) {?>
-          <li class="page-item <?php if ($i === $page) {echo "active";}?>" >
-            <a class="page-link " href="?page=<?=$i?>">
+          <li class="page-item " >
+            <a class="page-link <?php if ($i === $page) {echo "parrotbtn";}?> " href="?page=<?=$i?>">
               <?=$i;?>
             </a>
           </li>

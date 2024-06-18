@@ -2,7 +2,7 @@
 
 function getCommentairesById(PDO $pdo, int $limit = null, int $page = null): array
 {
-    $sql = 'SELECT * FROM comments WHERE statut = "oui" ';
+    $sql = 'SELECT * FROM comments ';
     if ($limit && !$page) {
         $sql .= "LIMIT :limit";
     }
