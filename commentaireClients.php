@@ -14,14 +14,19 @@ if (isset($_POST['envoyerFormulaire'])) {
         $commentaireCommentaireForm = htmlentities($_POST['commentaire']);
         $noteCommentaireForm = nl2br(htmlentities($_POST['note']));
 
-        $insererCommentaire = 'INSERT INTO comments(nom, commentaire, note) VALUES(:nom, :commentaire, :note)';
-        $stmt = $pdo->prepare($insererCommentaire);
-        $stmt->bindParam(":nom", $nomCommentaireForm, PDO::PARAM_STR);
-        $stmt->bindParam(":commentaire", $commentaireCommentaireForm, PDO::PARAM_STR);
-        $stmt->bindParam(":note", $noteCommentaireForm, PDO::PARAM_INT);
-        $stmt->execute();
-
-        $messages[] = 'Commentaire envoyé !';
+        if ($noteCommentaireForm < 1) {
+            $errors[] = 'Veuillez choisir une notre comprise entre 1 et 5 ';
+        } elseif ($noteCommentaireForm > 5) {
+            $errors[] = 'Veuillez choisir une notre comprise entre 1 et 5 ';
+        } else {
+            $insererCommentaire = 'INSERT INTO comments(nom, commentaire, note) VALUES(:nom, :commentaire, :note)';
+            $stmt = $pdo->prepare($insererCommentaire);
+            $stmt->bindParam(":nom", $nomCommentaireForm, PDO::PARAM_STR);
+            $stmt->bindParam(":commentaire", $commentaireCommentaireForm, PDO::PARAM_STR);
+            $stmt->bindParam(":note", $noteCommentaireForm, PDO::PARAM_INT);
+            $stmt->execute();
+            $messages[] = 'Commentaire envoyé !';
+        }
     } else {
         $errors[] = 'Veuillez remplir les champs';
     }
