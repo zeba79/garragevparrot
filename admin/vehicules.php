@@ -49,9 +49,7 @@ foreach ($vehicules as $vehicule) {?>
                 <?=$vehicule["prix"];?>
               </td>
             <td>
-                  <a href="/admin/modifierVehicule.php?id=<?=$vehicule['id']?>"
-                      class="btn btn-primary"
-                      onclick=" return confirm('Êtes-vous sûr de vouloir modifier ce véhicule ?')">
+                  <a href="/admin/modifierVehicule.php?id=<?=$vehicule['id']?>" class="btn btn-primary">
                       Modifier
                   </a>
                   <a href="supprimerVehicule.php?id=<?=$vehicule['id']?>" class="btn btn-danger "
@@ -62,8 +60,7 @@ foreach ($vehicules as $vehicule) {?>
     </tr>
         <?php }?>
 </tbody>
-      <a href="./ajouterVehicules.php" class="btn btn-success"
-          onclick=" return confirm('Êtes-vous sûr de vouloir ajouter un véhicule ?')" >
+      <a href="./ajouterVehicules.php" class="btn btn-success">
           Ajouter un vehicule
       </a>
 </table>

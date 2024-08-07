@@ -10,12 +10,7 @@ $vehicules = getVehicules($pdo, HOME_VEHICULES_LIMIT);
 $commentaires = getCommentairesById($pdo, HOME_COMMENTAIRES_LIMIT);
 
 ?>
-<div class="container">
 
-    <div class=" row d-md-flex justify-content-md-center">
-            <a href="occasions.php" class="btn px-4 me-md-2 text-center parrot-color parrotbtn ">Découvrez toute notre gamme de Véhicules d'occasions</a>
-        </div>
-</div>
 <div class="row">
     <?php foreach ($vehicules as $key => $vehicule) {
     require __DIR__ . '/templates/vehicule_part.php';

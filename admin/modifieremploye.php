@@ -37,19 +37,25 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
             $emailUpdate = htmlentities($_POST["email"]);
             $passwordUpdate = htmlentities($_POST["password"]);
 
-            // Hashage du mot de passe saisi coté formulaire
-            $hashedPassword = password_hash($passwordUpdate, PASSWORD_DEFAULT);
+            if (!empty($_POST["password"])) {
 
-            $modifierEmploye = 'UPDATE users SET nom =:nom , prenom =:prenom, role = :role, email = :email , password = :password WHERE id = :id ';
-            $updateEmploye = $pdo->prepare($modifierEmploye);
-            $updateEmploye->bindValue(':nom', $nom);
-            $updateEmploye->bindValue(':prenom', $prenom);
-            $updateEmploye->bindValue(':role', $roleUpdate);
-            $updateEmploye->bindValue(':email', $emailUpdate);
-            $updateEmploye->bindValue(':password', $hashedPassword);
-            $updateEmploye->bindValue(':id', $getId);
-            $updateEmploye->execute();
-            $messages[] = 'L\'employé(e) a bien été modifié(e) !';
+                // Hashage du mot de passe saisi coté formulaire
+                $hashedPassword = password_hash($passwordUpdate, PASSWORD_DEFAULT);
+
+                $modifierEmploye = 'UPDATE users SET nom =:nom , prenom =:prenom, role = :role, email = :email , password = :password WHERE id = :id ';
+                $updateEmploye = $pdo->prepare($modifierEmploye);
+                $updateEmploye->bindValue(':nom', $nom);
+                $updateEmploye->bindValue(':prenom', $prenom);
+                $updateEmploye->bindValue(':role', $roleUpdate);
+                $updateEmploye->bindValue(':email', $emailUpdate);
+                $updateEmploye->bindValue(':password', $hashedPassword);
+                $updateEmploye->bindValue(':id', $getId);
+                $updateEmploye->execute();
+                $messages[] = 'L\'employé(e) a bien été modifié(e) !';
+            } else {
+                $errors[] = 'Veuillez renseigner le nouveau mot de passe';
+
+            }
 
         }
 
@@ -85,17 +91,20 @@ foreach ($errors as $error) {?>
     </div>
     <div class="mb-3 mx-5">
         <label for="role" class="form-label">Role</label>
-        <input type="text" name="role" id="role" value= "<?=$role;?>" class="form-control" required >
+        <select name="role" id="role" class="form-select" required>
+            <option selected>employe</option>
+            <option value="">autre</option>
+        </select>
     </div>
     <div class="mb-3 mx-5">
-        <label for="email" class="form-label" required >Email</label>
-        <input type="email" name="email" id="email" value= "<?=$email;?>" class="form-control">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" id="email" value= "<?=$email;?>" class="form-control" required>
     </div>
     <div class="mb-3 mx-5">
-        <label for="password" class="form-label" value= "<?=$password;?>" required >Mot de passe</label>
-        <input type="password" name="password" id="password" class="form-control">
+        <label for="password" class="form-label" value= "<?=$password;?>" >Mot de passe</label>
+        <input type="password" name="password" id="password" class="form-control"  >
     </div>
-    <input type="submit" name="modifierEmploye" value="modifier employé(e)" onclick=" return confirm('Êtes-vous sûr de vouloir modifier cet(te) employé(e) ?')" class="btn parrotbtn mx-5">
+    <input type="submit" name="modifierEmploye" value="modifier employé(e)" class="btn parrotbtn mx-5">
 </form>
 </form>
 

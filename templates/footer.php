@@ -1,7 +1,7 @@
 <div class="row header_footer">
   <div class=" mb-0 ">
     <footer class="row ">
-          <div class="col mb-3">
+      <div class="col mb-3">
         <h5>Suivez-nous sur :</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 parrot-color">Facebook</a></li>
@@ -13,26 +13,24 @@
 
       <div class="col mb-3">
         <h5>Horaires d'ouverture :</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2">Lun. : 8:45 - 12:00, 14:00 - 18:00</li>
-          <li class="nav-item mb-2">Mar. : 8:45 - 12:00, 14:00 - 18:00</li>
-          <li class="nav-item mb-2">Mer. : 8:45 - 12:00, 14:00 - 18:00</li>
-          <li class="nav-item mb-2">Jeu. : 8:45 - 12:00, 14:00 - 18:00</li>
-          <li class="nav-item mb-2">Vend. : 8:45 - 12:00, 14:00 - 18:00</li>
-          <li class="nav-item mb-2">Sam. : 8:45 - 12:00</li>
-          <li class="nav-item mb-2">Dim. : Fermé</li>
-            </ul>
+          <p>Lun. : 8:45 - 12:00, 14:00 - 18:00</p>
+          <p>Mar. : 8:45 - 12:00, 14:00 - 18:00</p>
+          <p>Mer. : 8:45 - 12:00, 14:00 - 18:00</p>
+          <p>Jeu. : 8:45 - 12:00, 14:00 - 18:00</p>
+          <p>Vend. : 8:45 - 12:00, 14:00 - 18:00</p>
+          <p>Sam. : 8:45 - 12:00</p>
+          <p>Dim. : Fermé</p>
       </div>
 
       <div class="col mb-3">
-      <h5>Adresse postale :</h5>
-        <p>Garage Vincent Parrot</p>
-        <p>255 Rue Parrot - 31290 ParrotVille</p>
-        <p>garageparrot@parrot.fr</p>
-        <p>04 75 25 25 25</p>
-        <a href="index.php" class="text-decoration-none text-body-secondary copyright">
-        © 2024 - Garage Vincent Parrot
-        </a>
+        <h5>Adresse postale :</h5>
+          <p>Garage Vincent Parrot</p>
+          <p>255 Rue Parrot - 31290 ParrotVille</p>
+          <p>garageparrot@parrot.fr</p>
+          <p>04 75 25 25 25</p>
+          <a href="index.php" class="text-decoration-none text-body-secondary copyright">
+          © 2024 - Garage Vincent Parrot
+          </a>
       </div>
 
     </footer>

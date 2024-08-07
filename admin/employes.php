@@ -39,9 +39,7 @@ foreach ($employes as $employe) {?>
                         <td scope="row"><?=$employe["prenom"];?></td>
                         <td scope="row"><?=$employe["role"];?></td>
                         <td>
-                        <a href="./modifierEmploye.php?id=<?=$employe["id"];?>"
-                            class="btn btn-primary"
-                            onclick=" return confirm('Êtes-vous sûr de vouloir modifier cet(te) employé(e) ?')" >
+                        <a href="./modifierEmploye.php?id=<?=$employe["id"];?>" class="btn btn-primary">
                             Modifier
                         </a>
                             <a href="./supprimerEmploye.php?id=<?=$employe["id"];?>" class="btn btn-danger"
@@ -52,8 +50,7 @@ foreach ($employes as $employe) {?>
                     </tr>
                     <?php }?>
                 </tbody>
-                <a href="./ajouterEmploye.php" class="btn btn-success"
-                    onclick=" return confirm('Êtes-vous sûr de vouloir ajouter un(e) employé(e) ?')" >
+                <a href="./ajouterEmploye.php" class="btn btn-success">
                     Ajouter un employé
                 </a>
 </table>

@@ -46,8 +46,7 @@ foreach ($commentaires as $commentaire) {?>
                     </tr>
                     <?php }?>
                 </tbody>
-                <a href="./ajouterCommentaire.php" class="btn btn-success"
-                    onclick=" return confirm('Êtes-vous sûr de vouloir ajouter ce commentaire ?')" >
+                <a href="./ajouterCommentaire.php" class="btn btn-success">
                     Ajouter un commentaire
                 </a>
 </table>

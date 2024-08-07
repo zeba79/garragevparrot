@@ -68,7 +68,7 @@ foreach ($errors as $error) {?>
         <label for="statut" class="form-label">Statut : </label>
         <input type="text" name="statut" id="statut" class="form-control" required >
     </div>
-    <input type="submit" value="Ajouter commentaire" name="ajouterCommentaire" onclick=" return confirm('Êtes-vous sûr de vouloir ajouter ce commentaire ?')" class="btn parrotbtn mx-5">
+    <input type="submit" value="Ajouter commentaire" name="ajouterCommentaire" class="btn parrotbtn mx-5">
 </form>
 
 
