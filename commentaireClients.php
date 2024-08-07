@@ -16,9 +16,9 @@ if (isset($_POST['envoyerFormulaire'])) {
 
         $insererCommentaire = 'INSERT INTO comments(nom, commentaire, note) VALUES(:nom, :commentaire, :note)';
         $stmt = $pdo->prepare($insererCommentaire);
-        $stmt->bindParam(":nom", $nomCommentaireForm);
-        $stmt->bindParam(":commentaire", $commentaireCommentaireForm);
-        $stmt->bindParam(":note", $noteCommentaireForm);
+        $stmt->bindParam(":nom", $nomCommentaireForm, PDO::PARAM_STR);
+        $stmt->bindParam(":commentaire", $commentaireCommentaireForm, PDO::PARAM_STR);
+        $stmt->bindParam(":note", $noteCommentaireForm, PDO::PARAM_INT);
         $stmt->execute();
 
         $messages[] = 'Commentaire envoyé !';

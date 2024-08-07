@@ -40,7 +40,7 @@ foreach ($commentaires as $commentaire) {?>
                         <td scope="row"><?=$commentaire["note"];?></td>
                         <td scope="row"><?=$commentaire["statut"];?></td>
                         <td>
-                            <a href="./modifierCommentaire.php?id=<?=$commentaire["id"];?>" class="btn btn-primary" onclick=" return confirm('Êtes-vous sûr de vouloir modifier ce commentaire ?')" >Modifier</a>
+                            <a href="./modifierCommentaire.php?id=<?=$commentaire["id"];?>" class="btn btn-primary">Modifier</a>
                             <a href="./supprimerCommentaire.php?id=<?=$commentaire["id"];?>" class="btn btn-danger"  onclick=" return confirm('Êtes-vous sûr de vouloir supprimer ce commentaire ?') ">Supprimer</a>
                         </td>
                     </tr>
