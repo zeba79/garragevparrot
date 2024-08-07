@@ -1,8 +1,10 @@
 <?php
 
 function getCommentairesById(PDO $pdo, int $limit = null, int $page = null): array
+
+//  suppression de cette clause dans le $sql : WHERE statut = "oui" ORDER BY id DESC
 {
-    $sql = 'SELECT * FROM comments WHERE statut = "oui" ORDER BY id DESC ';
+    $sql = 'SELECT * FROM comments  ';
     if ($limit && !$page) {
         $sql .= "LIMIT :limit";
     }
